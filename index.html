@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kordev — Desarrollador web en Lebrija | Webs y tiendas online a medida</title>
+<meta name="description" content="Desarrollador web freelance en Lebrija, Sevilla. Diseño y programo webs, tiendas online y landing pages rápidas, cuidadas y pensadas para vender. Pide presupuesto sin compromiso.">
+<meta name="theme-color" content="#0a0b0f">
+<meta name="author" content="Marco Cordero">
+<link rel="canonical" href="https://kordev.vercel.app/">
+
+<!-- Open Graph / redes sociales y WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="kordev">
+<meta property="og:url" content="https://kordev.vercel.app/">
+<meta property="og:title" content="kordev — Webs que no solo se ven bien: te traen clientes">
+<meta property="og:description" content="Páginas web, tiendas online y landings a medida. Desarrollo web en Lebrija, Sevilla.">
+<meta property="og:image" content="https://kordev.vercel.app/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#inicio" class="logo">
+      <span class="logo__bracket">&lt;</span>kordev<span class="logo__slash">/</span><span class="logo__bracket">&gt;</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn btn--sm btn--primary nav__cta">Agendar cita</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__grid-bg" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="badge"><span class="badge__dot"></span> Disponible para nuevos proyectos</p>
+
+      <h1 class="hero__title">
+        Webs que no solo se ven bien:<br>
+        <span class="grad">te traen clientes.</span>
+      </h1>
+
+      <p class="hero__text">
+        Soy Marco, desarrollador web. Diseño y programo <strong>páginas web, tiendas online
+        y landings</strong> a medida: rápidas, cuidadas al detalle y preparadas para que la
+        gente te encuentre y te escriba.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          Agendar una cita
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#proyectos" class="btn btn--ghost btn--lg">Ver proyectos</a>
+      </div>
+
+      <ul class="hero__stats">
+        <li><strong>100%</strong><span>a medida, sin plantillas</span></li>
+        <li><strong>Móvil</strong><span>primero y responsive</span></li>
+        <li><strong>SEO</strong><span>optimizado desde el día 1</span></li>
+      </ul>
+    </div>
+
+    <!-- Ventana de código decorativa -->
+    <div class="hero__window" aria-hidden="true">
+      <div class="window">
+        <div class="window__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="window__title">proyecto.js</span>
+        </div>
+        <pre class="window__code"><code><span class="c-com">// Así empieza cada proyecto</span>
+<span class="c-key">const</span> <span class="c-var">proyecto</span> = {
+  cliente:   <span class="c-str">"tu negocio"</span>,
+  objetivo:  <span class="c-str">"más clientes"</span>,
+  diseño:    <span class="c-str">"a medida"</span>,
+  velocidad: <span class="c-num">100</span>,
+  entrega:   <span class="c-str">"en semanas, no meses"</span>
+};
+
+<span class="c-fn">lanzar</span>(proyecto); <span class="c-com">// 🚀</span>
+<span class="c-out">&gt; listo<span class="caret"></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section" id="servicios">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// servicios</p>
+      <h2 class="section__title">¿Qué puedo hacer por tu negocio?</h2>
+      <p class="section__sub">Desde una web sencilla hasta una tienda online completa. Todo hecho a medida, sin plantillas genéricas.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Páginas web a medida</h3>
+        <p>Webs corporativas y de presentación con diseño propio, textos cuidados y una velocidad de carga que se nota.</p>
+        <ul class="card__list">
+          <li>Diseño exclusivo para tu marca</li>
+          <li>Adaptada a móvil y tablet</li>
+          <li>Formularios y contacto directo</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h3l2.6 12.4a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 2-1.6L22 7H6"/></svg>
+        </div>
+        <h3>Tiendas online</h3>
+        <p>E-commerce completo: catálogo, carrito, pagos con tarjeta, cuentas de usuario y avisos por email automáticos.</p>
+        <ul class="card__list">
+          <li>Pagos seguros con Stripe</li>
+          <li>Panel para gestionar productos</li>
+          <li>Pedidos y emails automáticos</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Landings y reservas</h3>
+        <p>Páginas pensadas para una sola cosa: que te llamen, te reserven mesa o te pidan presupuesto.</p>
+        <ul class="card__list">
+          <li>Sistema de reservas o citas</li>
+          <li>Botón de WhatsApp directo</li>
+          <li>Enfocadas a convertir</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+        </div>
+        <h3>Mantenimiento y mejoras</h3>
+        <p>¿Ya tienes web? La reviso, la acelero, la actualizo y me encargo de que siga funcionando.</p>
+        <ul class="card__list">
+          <li>Optimización de velocidad y SEO</li>
+          <li>Cambios y nuevas secciones</li>
+          <li>Copias de seguridad y soporte</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="section section--alt" id="proyectos">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// proyectos</p>
+      <h2 class="section__title">Trabajos reales, online ahora mismo</h2>
+      <p class="section__sub">Puedes entrar y probarlos tú mismo. Nada de maquetas: son webs funcionando con clientes reales.</p>
+    </header>
+
+    <!-- Proyecto 1 -->
+    <article class="project reveal">
+      <div class="project__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="browser__url">wallburguer.com</span>
+          </div>
+          <a class="browser__shot" href="https://www.wallburguer.com" target="_blank" rel="noopener">
+            <img src="assets/img/wallburguer.png" alt="Página de inicio de Wall Burger, hamburguesería en Lebrija" loading="lazy" width="1440" height="1000">
+            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+        <div class="phone">
+          <img src="assets/img/wallburguer-mobile.png" alt="Wall Burger en versión móvil" loading="lazy">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">01 — Restauración</p>
+        <h3 class="project__title">Wall Burger</h3>
+        <p class="project__desc">
+          Web completa para una hamburguesería premium de Lebrija. Diseño oscuro con carácter,
+          animaciones al hacer scroll, carta interactiva con precios y reserva de mesa online.
+          El objetivo era claro: que al entrar te entren ganas de reservar.
+        </p>
+        <ul class="project__points">
+          <li>Carta digital con categorías y fotos</li>
+          <li>Reserva de mesa desde el móvil</li>
+          <li>Animaciones y diseño 100% personalizado</li>
+          <li>Optimizada para búsquedas locales</li>
+        </ul>
+        <ul class="tags">
+          <li>Next.js</li><li>React</li><li>Animaciones</li><li>Diseño a medida</li><li>SEO local</li>
+        </ul>
+        <a href="https://www.wallburguer.com" target="_blank" rel="noopener" class="btn btn--primary">
+          Visitar wallburguer.com
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Proyecto 2 -->
+    <article class="project project--reverse reveal">
+      <div class="project__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="browser__url">thefactoryphone.es</span>
+          </div>
+          <a class="browser__shot" href="https://www.thefactoryphone.es" target="_blank" rel="noopener">
+            <img src="assets/img/thefactoryphone.png" alt="Página de inicio de The Factory Phone, tienda de móviles y reparaciones" loading="lazy" width="1440" height="1000">
+            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+        <div class="phone">
+          <img src="assets/img/thefactoryphone-mobile.png" alt="The Factory Phone en versión móvil" loading="lazy">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">02 — E-commerce</p>
+        <h3 class="project__title">The Factory Phone</h3>
+        <p class="project__desc">
+          Tienda online completa para un negocio de compra, venta y reparación de móviles.
+          Catálogo con buscador, carrito, pago con tarjeta, cuentas de cliente y formularios
+          de reparación y tasación conectados al correo de la tienda.
+        </p>
+        <ul class="project__points">
+          <li>Catálogo con buscador y filtros</li>
+          <li>Carrito y pago seguro con tarjeta</li>
+          <li>Acceso de clientes y panel de pedidos</li>
+          <li>Solicitud de reparación y venta de móvil</li>
+        </ul>
+        <ul class="tags">
+          <li>React</li><li>Stripe</li><li>Login con Google</li><li>Emails automáticos</li><li>Cloudflare</li>
+        </ul>
+        <a href="https://www.thefactoryphone.es" target="_blank" rel="noopener" class="btn btn--primary">
+          Visitar thefactoryphone.es
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="section" id="proceso">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// cómo trabajo</p>
+      <h2 class="section__title">Del primer café a la web publicada</h2>
+      <p class="section__sub">Un proceso sencillo y sin sorpresas. Tú me cuentas, yo me encargo del resto.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num">01</span>
+        <h3>Hablamos</h3>
+        <p>Una llamada o un café para entender tu negocio, qué necesitas y a quién te diriges. Sin compromiso.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">02</span>
+        <h3>Presupuesto cerrado</h3>
+        <p>Te paso una propuesta con lo que incluye, el precio final y los plazos. Sin letra pequeña.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">03</span>
+        <h3>Diseño y desarrollo</h3>
+        <p>Creo la web y te voy enseñando avances para que puedas opinar y ajustar sobre la marcha.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__num">04</span>
+        <h3>Lanzamiento y soporte</h3>
+        <p>Publicamos, la dejo optimizada para Google y me quedo disponible para cualquier cambio.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section section--alt" id="contacto">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// contacto</p>
+      <h2 class="section__title">Cuéntame tu proyecto</h2>
+      <p class="section__sub">Rellena el formulario y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
+    </header>
+
+    <div class="contact">
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="nombre">Nombre <span>*</span></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o el de tu negocio" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="600 00 00 00">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="tipo">¿Qué necesitas?</label>
+            <select id="tipo" name="tipo">
+              <option>Página web a medida</option>
+              <option>Tienda online</option>
+              <option>Landing page / reservas</option>
+              <option>Mejorar mi web actual</option>
+              <option>Todavía no lo tengo claro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="presupuesto">Presupuesto aproximado</label>
+            <select id="presupuesto" name="presupuesto">
+              <option>Prefiero que me orientes</option>
+              <option>Menos de 500 €</option>
+              <option>500 € - 1.500 €</option>
+              <option>1.500 € - 3.000 €</option>
+              <option>Más de 3.000 €</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Cuéntame un poco más <span>*</span></label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿A qué te dedicas? ¿Qué te gustaría conseguir con la web?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block">
+          Enviar y pedir presupuesto
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+
+      <aside class="contact__side">
+        <div class="contact__card">
+          <h3>¿Prefieres hablarlo directamente?</h3>
+          <p>Escríbeme por WhatsApp o llámame. Te contesto rápido y sin compromiso.</p>
+
+          <a class="contact__link" id="waLink" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+            <span><strong>WhatsApp</strong><em id="waText">+34 672 09 67 69</em></span>
+          </a>
+
+          <a class="contact__link" id="mailLink" href="mailto:corderojuradomarco@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            <span><strong>Email</strong><em>corderojuradomarco@gmail.com</em></span>
+          </a>
+
+          <a class="contact__link" id="callLink" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span><strong>Teléfono</strong><em id="callText">+34 672 09 67 69</em></span>
+          </a>
+        </div>
+
+        <div class="contact__card contact__card--accent">
+          <h3>Respuesta en 24 h</h3>
+          <p>Primera consulta y presupuesto siempre gratis. Si el proyecto no encaja, te lo digo desde el principio.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#inicio" class="logo">
+      <span class="logo__bracket">&lt;</span>kordev<span class="logo__slash">/</span><span class="logo__bracket">&gt;</span>
+    </a>
+    <p class="footer__text">Desarrollo web a medida · Lebrija, Sevilla</p>
+    <p class="footer__copy">© <span id="year">2026</span> Marco Cordero. Hecho a mano, línea a línea.</p>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+
+<!-- Datos estructurados: ayudan a Google a entender quién eres y dónde estás -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "kordev — Marco Cordero",
+  "description": "Desarrollo de páginas web, tiendas online y landing pages a medida.",
+  "url": "https://kordev.vercel.app/",
+  "image": "https://kordev.vercel.app/assets/img/og.png",
+  "email": "corderojuradomarco@gmail.com",
+  "telephone": "+34672096769",
+  "priceRange": "€€",
+  "areaServed": { "@type": "Place", "name": "Sevilla, España" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lebrija",
+    "addressRegion": "Sevilla",
+    "addressCountry": "ES"
+  },
+  "founder": { "@type": "Person", "name": "Marco Cordero" },
+  "knowsAbout": ["Desarrollo web", "Tiendas online", "Landing pages", "SEO local"]
+}
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
