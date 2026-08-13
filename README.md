@@ -38,10 +38,36 @@ Si prefieres recibirlo por email, crea una cuenta gratuita en
 
 Abre `index.html` con doble clic. Ya está.
 
-## Publicarla
+## Publicarla en Vercel (kordev.vercel.app)
 
-Al ser estática vale cualquier hosting gratuito: sube la carpeta entera a
-Netlify (arrastrar y soltar), Vercel, Cloudflare Pages o GitHub Pages.
+La carpeta ya es un repositorio git con el primer commit hecho y lleva
+`vercel.json` con cabeceras de caché y seguridad.
+
+1. Crea un repositorio **vacío** en <https://github.com/new> llamado `kordev`
+   (sin README, sin .gitignore).
+2. En una terminal dentro de esta carpeta:
+
+   ```bash
+   git remote add origin https://github.com/TU-USUARIO/kordev.git
+   git push -u origin main
+   ```
+
+3. Entra en <https://vercel.com/new>, importa el repositorio `kordev` y pulsa
+   **Deploy**. No hay que configurar nada: es una web estática.
+4. Queda publicada en `https://kordev.vercel.app`.
+
+A partir de ahí, cada `git push` la actualiza sola.
+
+### Si prefieres no usar GitHub
+
+Instala Node (`winget install OpenJS.NodeJS.LTS`), abre una terminal en esta
+carpeta y ejecuta `npx vercel login` y después `npx vercel --prod`. Cuando
+pregunte el nombre del proyecto, escribe `kordev`.
+
+### Al cambiar de dominio
+
+Si algún día le pones dominio propio, busca y reemplaza `kordev.vercel.app` en
+`index.html`, `robots.txt` y `sitemap.xml`.
 
 ## Actualizar las capturas de los proyectos
 
