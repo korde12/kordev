@@ -322,10 +322,10 @@ const CONFIG = {
 
   const azar = (min, max) => min + Math.random() * (max - min);
   const pausaTras = (ch) => {
-    if (ch === '\n') return azar(210, 340);
-    if (ch === ' ') return azar(10, 22);
-    if (',;{}'.includes(ch)) return azar(90, 160);
-    return azar(15, 46);
+    if (ch === '\n') return azar(150, 250);
+    if (ch === ' ') return azar(7, 16);
+    if (',;{}'.includes(ch)) return azar(65, 115);
+    return azar(10, 32);
   };
 
   let ri = 0, ci = 0, esperandoEjecucion = false;
@@ -343,7 +343,7 @@ const CONFIG = {
       if (run.cls === 'c-out') {
         esperandoEjecucion = true;
         windowEl.classList.add('is-running');
-        setTimeout(paso, 560);
+        setTimeout(paso, 380);
         return;
       }
     }
