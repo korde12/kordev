@@ -9,3 +9,8 @@ desktop.ini
 
 # Vercel
 .vercel
+
+# Herramientas de Claude Code / impeccable (no forman parte de la web)
+.claude/
+.impeccable/live/
+.impeccable/questions/

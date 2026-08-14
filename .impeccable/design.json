@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-14T00:00:00.000Z",
+  "title": "Design System: kordev",
+  "extensions": {
+    "colorMeta": {
+      "accent-green": {
+        "role": "primary",
+        "displayName": "Verde terminal",
+        "canonical": "#2ef58f",
+        "tonalRamp": ["#04140a", "#08301c", "#0d4f2e", "#127343", "#189a5a", "#20c574", "#2ef58f", "#a7ffd4"]
+      },
+      "accent-blue": {
+        "role": "secondary",
+        "displayName": "Azul eléctrico",
+        "canonical": "#6ea8ff",
+        "tonalRamp": ["#081426", "#0f2245", "#173566", "#204a8c", "#2e63b5", "#4a86e0", "#6ea8ff", "#bcd7ff"]
+      },
+      "accent-violet": {
+        "role": "tertiary",
+        "displayName": "Violeta órbita",
+        "canonical": "#b98bff",
+        "tonalRamp": ["#170b2b", "#26124b", "#371c6d", "#4c2894", "#6538bd", "#8a5fe0", "#b98bff", "#dfc9ff"]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Índigo casi negro",
+        "canonical": "#05050d",
+        "tonalRamp": ["#05050d", "#090a16", "#10101f", "#161829", "#262a42", "#3b3f5e", "#6f6e8c", "#a6a5bf"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Blanco lunar",
+        "canonical": "#f1eff7",
+        "tonalRamp": ["#1a1a24", "#2b2b3a", "#3f3f52", "#57576d", "#6f6e8c", "#a6a5bf", "#d2d0e0", "#f1eff7"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular del hero y títulos de sección, siempre en mayúsculas."
+      },
+      "body": {
+        "displayName": "Cuerpo",
+        "purpose": "Párrafos y descripciones; nunca en mayúsculas."
+      },
+      "label": {
+        "displayName": "Etiqueta mono",
+        "purpose": "Navegación, etiquetas de sección, código y metadatos técnicos."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-elevation",
+        "value": "0 24px 60px -22px rgba(0,0,0,.85)",
+        "purpose": "Elevación de los elementos objeto: ventana de código y mockups de navegador/móvil."
+      },
+      {
+        "name": "accent-glow",
+        "value": "0 10px 26px -8px rgba(46,245,143,.3)",
+        "purpose": "Resplandor verde bajo el botón primario."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px rgba(110,168,255,.14)",
+        "purpose": "Halo de foco en campos de formulario."
+      },
+      {
+        "name": "run-pulse",
+        "value": "0 0 46px -8px rgba(46,245,143,.5)",
+        "purpose": "Destello único cuando proyecto.js termina de ejecutarse."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "ease",
+        "purpose": "Transiciones de estado por defecto (hover, foco, elevación), 0.18-0.35s."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity .7s ease, transform .7s ease",
+        "purpose": "Entrada de secciones al hacer scroll, desde translateY(26px)."
+      },
+      {
+        "name": "nebula-drift",
+        "value": "sin/cos loop, ~0.0001 rad/ms",
+        "purpose": "Desplazamiento lento de las manchas de color del canvas de fondo."
+      },
+      {
+        "name": "cursor-follow",
+        "value": "lerp 0.16 por frame",
+        "purpose": "Estela suave del cursor personalizado."
+      }
+    ],
+    "breakpoints": [
+      { "name": "lg", "value": "980px" },
+      { "name": "md", "value": "760px" },
+      { "name": "sm", "value": "420px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal: agendar cita, enviar formulario, visitar proyecto.",
+      "html": "<button class=\"ds-btn-primary\">Agendar una cita</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:10px; background:#2ef58f; color:#05050d; padding:16px 30px; border:1px solid transparent; border-radius:3px; font-family:'Hanken Grotesk',system-ui,sans-serif; font-size:.96rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; cursor:pointer; box-shadow:0 0 0 1px rgba(46,245,143,.3), 0 10px 26px -8px rgba(46,245,143,.3); transition:transform .18s ease, box-shadow .25s ease; } .ds-btn-primary:hover { transform:translateY(-2px); box-shadow:0 0 0 1px rgba(46,245,143,.5), 0 16px 34px -8px rgba(46,245,143,.5); } .ds-btn-primary:focus-visible { outline:2px solid #6ea8ff; outline-offset:3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acción secundaria junto al botón primario.",
+      "html": "<button class=\"ds-btn-ghost\">Ver proyectos</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; gap:10px; background:transparent; color:#f1eff7; padding:16px 30px; border:1px solid #262a42; border-radius:3px; font-family:'Hanken Grotesk',system-ui,sans-serif; font-size:.96rem; font-weight:700; letter-spacing:.03em; text-transform:uppercase; cursor:pointer; transition:transform .18s ease, border-color .2s ease, color .2s ease; } .ds-btn-ghost:hover { border-color:#6ea8ff; color:#6ea8ff; transform:translateY(-2px); } .ds-btn-ghost:focus-visible { outline:2px solid #6ea8ff; outline-offset:3px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Campo del formulario de contacto, sobre tarjeta de superficie.",
+      "html": "<label class=\"ds-field\"><span>Nombre</span><input class=\"ds-input\" type=\"text\" placeholder=\"Tu nombre o el de tu negocio\"></label>",
+      "css": ".ds-field { display:block; font-family:'Hanken Grotesk',system-ui,sans-serif; } .ds-field span { display:block; margin-bottom:8px; font-size:.78rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:#a6a5bf; } .ds-input { width:100%; padding:13px 15px; background:#05050d; border:1px solid #262a42; border-radius:3px; color:#f1eff7; font-family:inherit; font-size:.95rem; transition:border-color .2s ease, box-shadow .2s ease; } .ds-input::placeholder { color:#57576d; } .ds-input:focus { outline:none; border-color:#6ea8ff; box-shadow:0 0 0 3px rgba(110,168,255,.14); }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Enlace de la barra superior: mono fino, mayúsculas, el tracking se abre al hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Proyectos</a>",
+      "css": ".ds-nav-link { font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.74rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:#a6a5bf; text-decoration:none; transition:color .25s ease, letter-spacing .25s ease; } .ds-nav-link:hover { color:#f1eff7; letter-spacing:.2em; } .ds-nav-link:focus-visible { outline:2px solid #6ea8ff; outline-offset:4px; }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Etiqueta de tecnología bajo cada proyecto.",
+      "html": "<span class=\"ds-tag\">Next.js</span>",
+      "css": ".ds-tag { display:inline-block; padding:5px 12px; border:1px solid #262a42; border-radius:100px; background:#10101f; font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.72rem; color:#a6a5bf; }"
+    },
+    {
+      "name": "Availability Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Píldora de disponibilidad sobre el titular del hero, con punto que late.",
+      "html": "<span class=\"ds-badge\"><i></i> Disponible para nuevos proyectos</span>",
+      "css": ".ds-badge { display:inline-flex; align-items:center; gap:10px; padding:7px 16px 7px 8px; border:1px solid #262a42; border-radius:100px; background:#10101f; font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.74rem; letter-spacing:.04em; text-transform:uppercase; color:#a6a5bf; } .ds-badge i { width:8px; height:8px; border-radius:50%; background:#2ef58f; animation:ds-pulse 2.2s infinite; } @keyframes ds-pulse { 0% { box-shadow:0 0 0 0 rgba(46,245,143,.55); } 70% { box-shadow:0 0 0 9px rgba(46,245,143,0); } 100% { box-shadow:0 0 0 0 rgba(46,245,143,0); } }"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "Fila del programa de servicios: número de sesión, cuerpo y lista de entregables. Sustituye a las tarjetas de icono.",
+      "html": "<div class=\"ds-ledger-row\"><span class=\"ds-ledger-num\">01</span><div class=\"ds-ledger-body\"><h3>Páginas web a medida</h3><p>Webs corporativas con diseño propio y una velocidad de carga que se nota.</p></div><ul class=\"ds-ledger-tags\"><li>Diseño exclusivo</li><li>Adaptada a móvil</li></ul></div>",
+      "css": ".ds-ledger-row { display:grid; grid-template-columns:78px 1.3fr 1fr; gap:28px; align-items:start; padding:32px 0; border-bottom:1px solid #1a1c2f; font-family:'Hanken Grotesk',system-ui,sans-serif; } .ds-ledger-num { font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.82rem; color:#2ef58f; padding-top:.3em; } .ds-ledger-num::before { content:'SES.'; display:block; font-size:.62rem; color:#6f6e8c; margin-bottom:4px; letter-spacing:.1em; } .ds-ledger-body h3 { margin:0 0 10px; font-family:'Unbounded','Hanken Grotesk',sans-serif; font-weight:700; text-transform:uppercase; font-size:1.1rem; color:#f1eff7; } .ds-ledger-body p { margin:0; color:#a6a5bf; font-size:.94rem; } .ds-ledger-tags { list-style:none; margin:0; padding:6px 0 0; display:flex; flex-direction:column; gap:9px; } .ds-ledger-tags li { position:relative; padding-left:20px; font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.86rem; color:#6f6e8c; } .ds-ledger-tags li::before { content:'>'; position:absolute; left:0; color:#6ea8ff; }"
+    },
+    {
+      "name": "Code Window",
+      "kind": "card",
+      "refersTo": "window",
+      "description": "Componente de firma: panel proyecto.js con barra de puntos, perspectiva en reposo y tecleo animado.",
+      "html": "<div class=\"ds-window\"><div class=\"ds-window-bar\"><span class=\"ds-dot ds-dot-a\"></span><span class=\"ds-dot ds-dot-b\"></span><span class=\"ds-dot ds-dot-c\"></span><span class=\"ds-window-title\">proyecto.js</span></div><pre class=\"ds-window-code\"><code><span class=\"ds-com\">// Así empieza cada proyecto</span>\n<span class=\"ds-key\">const</span> <span class=\"ds-var\">proyecto</span> = { cliente: <span class=\"ds-str\">\"tu negocio\"</span> };</code></pre></div>",
+      "css": ".ds-window { background:#10101f; border:1px solid #262a42; border-radius:3px; box-shadow:0 24px 60px -22px rgba(0,0,0,.85), 0 0 0 1px rgba(110,168,255,.08); overflow:hidden; transform:perspective(1200px) rotateY(-6deg) rotateX(2deg); transition:transform .5s ease; } .ds-window:hover { transform:perspective(1200px) rotateY(0) rotateX(0); } .ds-window-bar { display:flex; align-items:center; gap:8px; padding:12px 16px; background:#161829; border-bottom:1px solid #262a42; } .ds-dot { width:11px; height:11px; border-radius:50%; } .ds-dot-a { background:#b98bff; } .ds-dot-b { background:#6ea8ff; } .ds-dot-c { background:#2ef58f; } .ds-window-title { margin-left:12px; font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.78rem; color:#6f6e8c; } .ds-window-code { margin:0; padding:22px; font-family:'JetBrains Mono',ui-monospace,monospace; font-size:.85rem; line-height:1.85; color:#a6a5bf; } .ds-com { color:#5c6478; font-style:italic; } .ds-key { color:#b98bff; } .ds-var { color:#6ea8ff; } .ds-str { color:#2ef58f; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El portal de la conferencia en órbita",
+    "overview": "kordev no se presenta como una web de plantilla con un par de acentos de color: se presenta como el punto de entrada a una conferencia de diseño que ocurre en el espacio, donde una nebulosa respira despacio detrás de titulares monumentales en mayúsculas. El visitante entra por un contador de carga que cuenta hasta 100, como si estuviera accediendo a una sala, y aterriza en un primer viewport dominado por el titular y el color en movimiento. El resto del sistema — servicios como sesiones de programa, el proceso como protocolo de lanzamiento, los proyectos como demos en directo — mantiene ese mismo registro: preciso, confiado, sin plantillas genéricas de icono+texto. Rechazado explícitamente: el tema oscuro con acento neón único y bordes con resplandor plano, las tarjetas de icono+título+texto del mismo tamaño, y cualquier hero genérico de título+párrafo+dos botones sin una demostración real detrás.",
+    "keyCharacteristics": [
+      "Fondo de nebulosa animada en canvas (violeta, verde, azul) que se mueve muy despacio detrás de toda la página.",
+      "Titulares en Unbounded, mayúsculas, a escala de cartel.",
+      "Cursor propio con estela que se agranda sobre elementos interactivos.",
+      "Contador de carga 0→100 antes de revelar la página.",
+      "Componentes reales (proyecto.js, mockups de navegador/móvil) como prueba, no decoración."
+    ],
+    "rules": [
+      {
+        "name": "The One Nebula Rule",
+        "body": "El degradado de tres colores completo solo vive en el canvas de fondo. En componentes de UI, cada superficie usa como máximo un acento saturado a la vez.",
+        "section": "colors"
+      },
+      {
+        "name": "The Uppercase-For-Weight Rule",
+        "body": "Las mayúsculas se reservan para titulares y etiquetas cortas; el cuerpo de texto siempre va en minúsculas para no fatigar la lectura.",
+        "section": "typography"
+      },
+      {
+        "name": "The Object Depth Rule",
+        "body": "Solo los elementos que representan un objeto físico (ventana, navegador, teléfono) llevan sombra y perspectiva; el resto de la interfaz permanece plano.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do mantener el degradado completo de la nebulosa únicamente en el canvas de fondo; los componentes de UI usan un acento saturado a la vez (The One Nebula Rule).",
+      "Do usar Unbounded en mayúsculas solo para titulares y etiquetas cortas; el cuerpo siempre en minúsculas.",
+      "Do dar sombra y perspectiva solo a los elementos objeto (ventana de código, mockups); el resto de la interfaz va plano.",
+      "Do respetar prefers-reduced-motion en la nebulosa, el cursor, el contador de carga y la animación de proyecto.js."
+    ],
+    "donts": [
+      "Don't volver al trío verde/cian/violeta neón de la dirección anterior ni al horizonte de rejilla en perspectiva.",
+      "Don't usar tarjetas de icono+título+texto del mismo tamaño como estructura de página.",
+      "Don't añadir un kicker o eyebrow encima de un titular nuevo.",
+      "Don't usar sombras duras con offset (box-shadow sin difuminado); la única sombra dura del sistema es decorativa dentro de proyecto.js, no un patrón a repetir."
+    ]
+  }
+}
