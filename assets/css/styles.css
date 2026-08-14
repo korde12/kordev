@@ -509,29 +509,57 @@ body.is-loading{ overflow:hidden; }
    SERVICIOS — programa de sesiones
    ========================================================= */
 .ledger{
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
 }
 .ledger__row{
   display:grid;
-  grid-template-columns:78px 1.3fr 1fr;
-  gap:28px;
+  grid-template-columns:56px 1fr;
+  gap:22px 28px;
   align-items:start;
-  padding:32px 0;
-  border-bottom:1px solid var(--border-soft);
+  padding:30px 26px;
+  border-radius:20px;
   position:relative;
+  background:rgba(22,24,41,.46);
+  border:1px solid var(--border);
+  box-shadow:0 30px 60px -36px rgba(0,0,0,.7);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  animation:tarjetaFlota 6.4s ease-in-out infinite;
+  animation-delay:calc(var(--flota-retraso, 0) * 1s);
+  will-change:translate;
+  transition:border-color .3s ease, box-shadow .3s ease, animation-play-state .2s ease;
 }
-.ledger__row:last-child{ border-bottom:none; }
+.ledger__row:nth-child(1){ --flota-retraso:0; }
+.ledger__row:nth-child(2){ --flota-retraso:.9; }
+.ledger__row:nth-child(3){ --flota-retraso:1.8; }
+.ledger__row:nth-child(4){ --flota-retraso:2.7; }
+@keyframes tarjetaFlota{
+  0%,100%{ translate:0 0; }
+  50%    { translate:0 -7px; }
+}
 .ledger__row::before{
   content:'';
   position:absolute;
   left:0; top:0;
   width:0; height:100%;
   border-left:2px solid var(--accent);
+  border-radius:20px 0 0 20px;
   opacity:0;
   transition:opacity .25s ease;
 }
+.ledger__row:hover,
+.ledger__row:focus-within{
+  border-color:var(--border-soft);
+  box-shadow:0 34px 70px -34px rgba(0,0,0,.8), 0 0 0 1px rgba(110,168,255,.1);
+  animation-play-state:paused;
+}
 .ledger__row:hover::before{ opacity:1; }
+.ledger__tags{ grid-column:1 / -1; }
+@media (prefers-reduced-motion: reduce){
+  .ledger__row{ animation:none; }
+}
 
 .ledger__num{
   font-family:var(--mono);
@@ -934,8 +962,8 @@ body.is-loading{ overflow:hidden; }
   .project--reverse{ grid-template-columns:1fr; gap:36px; }
   .project--reverse .project__media{ order:0; }
   .contact{ grid-template-columns:1fr; }
-  .ledger__row{ grid-template-columns:56px 1fr; }
-  .ledger__tags{ grid-column:1 / -1; padding-top:14px; }
+  .ledger{ grid-template-columns:1fr; }
+  .ledger__tags{ padding-top:14px; }
 }
 
 @media (max-width:760px){
@@ -975,5 +1003,5 @@ body.is-loading{ overflow:hidden; }
 @media (max-width:420px){
   .container{ padding:0 18px; }
   .window__code{ font-size:.74rem; padding:16px; }
-  .ledger__row{ padding:26px 0; }
+  .ledger__row{ padding:24px 20px; }
 }
