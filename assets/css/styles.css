@@ -515,7 +515,7 @@ body.is-loading{ overflow:hidden; }
 }
 .ledger__row{
   display:grid;
-  grid-template-columns:56px 1fr;
+  grid-template-columns:68px 1fr;
   gap:22px 28px;
   align-items:start;
   padding:30px 26px;
@@ -563,13 +563,13 @@ body.is-loading{ overflow:hidden; }
 
 .ledger__num{
   font-family:var(--mono);
-  font-size:.82rem;
+  font-size:2rem;
+  font-weight:700;
   color:var(--accent);
   line-height:1;
-  padding-top:.3em;
-  letter-spacing:.02em;
+  letter-spacing:.01em;
 }
-.ledger__num::before{ content:'SES.'; display:block; font-size:.62rem; color:var(--text-faint); margin-bottom:4px; letter-spacing:.1em; }
+.ledger__num::before{ content:'SES.'; display:block; font-size:.62rem; font-weight:400; color:var(--text-faint); margin-bottom:6px; letter-spacing:.1em; }
 
 .ledger__body h3{
   font-family:var(--display);
