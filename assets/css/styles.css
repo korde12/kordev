@@ -905,6 +905,9 @@ body.is-loading{ overflow:hidden; }
 .footer__inner{ display:grid; gap:8px; justify-items:center; }
 .footer__text{ color:var(--text-dim); font-size:.9rem; }
 .footer__copy{ color:var(--text-faint); font-size:.8rem; font-family:var(--mono); }
+/* Firma en tono de comentario de código, el mismo verbo visual que
+   "// Así empieza cada proyecto" en la ventana proyecto.js del hero. */
+.footer__sign{ color:#5c6478; font-style:italic; margin-left:6px; }
 
 .fab{
   position:fixed;
