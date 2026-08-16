@@ -145,6 +145,7 @@ const CONFIG = {
 
   set('waLink', 'href', `${waBase}?text=${saludo}`);
   set('fabWa', 'href', `${waBase}?text=${saludo}`);
+  set('navWaLink', 'href', `${waBase}?text=${saludo}`);
   set('mailLink', 'href', `mailto:${CONFIG.email}`);
   set('callLink', 'href', `tel:+${CONFIG.whatsapp}`);
 
