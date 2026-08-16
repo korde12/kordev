@@ -511,8 +511,8 @@ body.is-loading{ overflow:hidden; }
 }
 .ledger__row{
   display:grid;
-  grid-template-columns:68px 1fr;
-  gap:22px 28px;
+  grid-template-columns:clamp(74px, 8vw, 96px) 1fr;
+  gap:22px 26px;
   align-items:start;
   padding:30px 26px;
   border-radius:20px;
@@ -546,15 +546,23 @@ body.is-loading{ overflow:hidden; }
   .ledger__row{ animation:none; }
 }
 
+/* El número pesa lo mismo que el bloque de texto de al lado: arranca a
+   la misma altura que el título y baja hasta el final del párrafo.
+   `align-self:stretch` es lo que hace que la columna deje de ser una
+   etiqueta suelta y se lea como el índice de la ficha. */
 .ledger__num{
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
   font-family:var(--mono);
-  font-size:2rem;
+  font-size:clamp(2.9rem, 3.6vw, 3.7rem);
   font-weight:700;
   color:var(--accent);
-  line-height:1;
-  letter-spacing:.01em;
+  line-height:.9;
+  letter-spacing:-.02em;
 }
-.ledger__num::before{ content:'SES.'; display:block; font-size:.62rem; font-weight:400; color:var(--text-faint); margin-bottom:6px; letter-spacing:.1em; }
+.ledger__num::before{ content:'SES.'; display:block; font-size:.68rem; font-weight:400; color:var(--text-faint); margin-bottom:10px; letter-spacing:.14em; }
 
 .ledger__body h3{
   font-family:var(--display);
