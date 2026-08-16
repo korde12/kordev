@@ -177,7 +177,9 @@ Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores est
 Variante de tarjeta reservada al listado de servicios (`.ledger__row`), a los canales de contacto (`.canal`) y al botón secundario del hero (`.btn--glass`): fondo semitransparente (`rgba(22,24,41,.46–.5)`) con `backdrop-filter: blur(18px)`, radio `20px` (`rounded.lg`) y sombra difusa amplia. Las tarjetas flotan con una animación vertical sutil y desfasada entre sí, que se pausa al hover o foco para no interferir con la lectura.
 
 ### Canales de contacto
-Tres tarjetas de cristal, una por vía de contacto, en lugar de un formulario. Cada una toma el color de su aplicación en `--canal-color`, que tiñe el icono, el borde al hover y el halo. WhatsApp lleva más peso deliberadamente — columna más ancha (`1.3fr` frente a `1fr`), icono mayor y la única nota de apoyo — porque es el canal por el que Marco responde antes. Sin formulario: el visitante contacta por el medio que ya usa, sin rellenar campos.
+Tres tarjetas de cristal idénticas en tamaño (`repeat(3, 1fr)`), una por vía de contacto, en lugar de un formulario. Cada una toma el color de su aplicación en dos variables: `--canal-color` tiñe el icono, el borde al hover y la nota; `--canal-halo` es el mismo color difuminado como halo detrás de la tarjeta (`0 8px 52px -6px`), poco desplazado para que la envuelva en vez de caer como sombra — es lo que separa cada tarjeta del fondo. La jerarquía de WhatsApp no se hace con tamaño sino con la única nota de apoyo («La vía más rápida»), porque es el canal por el que Marco responde antes. Sin formulario: el visitante contacta por el medio que ya usa, sin rellenar campos.
+
+**Flotación.** Las tres flotan con `canalFlota` — vaivén de `-14px` con un balanceo de ±0.7° — y cada una con su propio ciclo (5.2s / 6.3s / 5.7s) y desfase, de forma que nunca coinciden y no se leen como un bloque. Al hover la animación se pausa, la tarjeta crece a `1.03` y el halo se intensifica.
 
 ### Inputs / Fields
 - **Style:** fondo `--bg`, borde `--border`, radio `3px`.

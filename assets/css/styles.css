@@ -765,19 +765,22 @@ body.is-loading{ overflow:hidden; }
 
 /* =========================================================
    CONTACTO — tres canales directos
-   El de WhatsApp pesa más: ocupa una columna más ancha y es el
-   único que lleva nota de apoyo, porque es la vía por la que
+   Tres tarjetas idénticas en tamaño; lo que distingue a cada una
+   es el halo de color de su aplicación, difuminado por detrás.
+   WhatsApp mantiene la nota de apoyo porque es la vía por la que
    Marco responde antes.
    ========================================================= */
 .canales{
   display:grid;
-  grid-template-columns:1.3fr 1fr 1fr;
-  gap:20px;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
   align-items:stretch;
 }
 
 .canal{
   --canal-color:var(--accent-2);
+  --canal-halo:rgba(110,168,255,.5);
+  position:relative;
   display:grid;
   grid-template-columns:auto 1fr;
   align-items:center;
@@ -786,31 +789,64 @@ body.is-loading{ overflow:hidden; }
   border-radius:20px;
   background:rgba(22,24,41,.46);
   border:1px solid var(--border);
-  box-shadow:0 30px 60px -36px rgba(0,0,0,.7);
+  /* El halo va poco desplazado y muy difuminado: envuelve la
+     tarjeta en vez de caer como sombra, que es lo que la separa
+     del fondo. La sombra oscura, debajo, sigue dando la altura. */
+  box-shadow:
+    0 8px 52px -6px var(--canal-halo),
+    0 30px 60px -30px rgba(0,0,0,.75);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
-  animation:tarjetaFlota 6.4s ease-in-out infinite;
+  /* Cada tarjeta con su propio ciclo y desfase: si compartieran
+     duración se leerían como un bloque que sube y baja a la vez. */
+  animation:canalFlota var(--flota-ciclo, 5.4s) ease-in-out infinite;
   animation-delay:calc(var(--flota-retraso, 0) * 1s);
-  will-change:translate;
-  transition:border-color .3s ease, box-shadow .3s ease;
+  will-change:translate, rotate;
+  transition:border-color .3s ease, box-shadow .35s ease, scale .35s ease;
 }
-.canal--wa  { --canal-color:var(--whatsapp); --flota-retraso:0; }
-.canal--tel { --canal-color:var(--accent-2); --flota-retraso:1.1; }
-.canal--mail{ --canal-color:var(--gmail);    --flota-retraso:2.2; }
+.canal--wa{
+  --canal-color:var(--whatsapp);
+  --canal-halo:rgba(37,211,102,.5);
+  --flota-retraso:0;
+  --flota-ciclo:5.2s;
+}
+.canal--tel{
+  --canal-color:var(--accent-2);
+  --canal-halo:rgba(110,168,255,.5);
+  --flota-retraso:.8;
+  --flota-ciclo:6.3s;
+}
+.canal--mail{
+  --canal-color:var(--gmail);
+  --canal-halo:rgba(234,67,53,.46);
+  --flota-retraso:1.7;
+  --flota-ciclo:5.7s;
+}
+
+/* Vaivén amplio con una pizca de balanceo: pide el click sin
+   llegar a marear ni a mover el texto lo bastante para molestar. */
+@keyframes canalFlota{
+  0%,100%{ translate:0 0;     rotate:0deg; }
+  30%    { translate:0 -14px; rotate:-.7deg; }
+  62%    { translate:0 -6px;  rotate:.6deg; }
+}
 
 .canal:hover,
 .canal:focus-visible{
   border-color:var(--canal-color);
-  box-shadow:0 34px 70px -34px rgba(0,0,0,.8), 0 0 0 1px var(--canal-color);
+  box-shadow:
+    0 10px 68px 2px var(--canal-halo),
+    0 0 0 1px var(--canal-color),
+    0 34px 70px -30px rgba(0,0,0,.8);
+  scale:1.03;
   animation-play-state:paused;
 }
 
 .canal svg{
-  width:26px; height:26px;
+  width:28px; height:28px;
   flex:none;
   color:var(--canal-color);
 }
-.canal--wa svg{ width:32px; height:32px; }
 
 .canal__texto{ display:flex; flex-direction:column; min-width:0; }
 .canal__texto strong{
