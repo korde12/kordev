@@ -65,7 +65,7 @@ p{ margin:0; }
 
 ::-webkit-scrollbar{ width:10px; }
 ::-webkit-scrollbar-track{ background:var(--bg); }
-::-webkit-scrollbar-thumb{ background:#242642; border-radius:10px; }
+::-webkit-scrollbar-thumb{ background:var(--border); border-radius:10px; }
 ::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
 
 /* =========================================================
@@ -609,7 +609,7 @@ body.is-loading{ overflow:hidden; }
   margin-left:12px;
   padding:4px 12px;
   background:var(--bg);
-  border-radius:3px;
+  border-radius:var(--radius);
   font-family:var(--mono);
   font-size:.74rem;
   color:var(--text-faint);
@@ -641,7 +641,7 @@ body.is-loading{ overflow:hidden; }
   gap:8px;
   background:rgba(5,5,13,.6);
   backdrop-filter:blur(2px);
-  color:#fff;
+  color:var(--text);
   font-weight:600;
   font-size:.92rem;
   text-transform:uppercase;
@@ -807,7 +807,7 @@ body.is-loading{ overflow:hidden; }
   resize:vertical;
 }
 .field input::placeholder,
-.field textarea::placeholder{ color:#4d5468; }
+.field textarea::placeholder{ color:var(--text-faint); }
 .field input:focus,
 .field select:focus,
 .field textarea:focus{

@@ -14,6 +14,10 @@ colors:
   accent-green: "#2ef58f"
   accent-blue: "#6ea8ff"
   accent-violet: "#b98bff"
+  syntax-comment: "#5c6478"
+  syntax-number: "#fbbf24"
+  device-bezel: "#1b1e28"
+  whatsapp-brand: "#25d366"
 typography:
   display:
     fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
@@ -21,6 +25,18 @@ typography:
     fontWeight: 800
     lineHeight: 1.05
     letterSpacing: "-0.015em"
+  headline:
+    fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
+    fontSize: "clamp(1.8rem, 4vw, 2.9rem)"
+    fontWeight: 800
+    lineHeight: 1.08
+    letterSpacing: "-0.01em"
+  title:
+    fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
+    fontSize: "1.1rem"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "0.005em"
   body:
     fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "16px"
@@ -36,6 +52,7 @@ typography:
 rounded:
   sm: "3px"
   md: "4px"
+  lg: "20px"
   pill: "100px"
 spacing:
   sm: "18px"
@@ -99,6 +116,12 @@ Casi negro azulado como base, con tres acentos saturados (verde terminal, azul e
 ### Named Rules
 **The One Nebula Rule.** El degradado de tres colores completo solo vive en el canvas de fondo. En componentes de UI, cada superficie usa como máximo un acento saturado a la vez.
 
+### Sub-paletas con contexto propio
+Tres familias de color viven fuera de la paleta principal a propósito, porque responden a una convención distinta a la del sitio:
+- **Resaltado de sintaxis** (`syntax-comment` `#5c6478`, `syntax-number` `#fbbf24`): dentro de `proyecto.js`, comentarios y números siguen la convención de un editor de código, no el acento de marca.
+- **Marca de WhatsApp** (`whatsapp-brand` `#25d366`): el botón flotante y su icono deben coincidir con el verde oficial de WhatsApp, no con el verde de acento del sitio — es una identidad ajena, no una elección de kordev.
+- **Bisel de dispositivo** (`device-bezel` `#1b1e28`): el marco del mockup de móvil es un tono propio, ligeramente más claro que `surface`, para leerse como el borde físico de un teléfono y no como una tarjeta más.
+
 ## Typography
 
 **Display Font:** Unbounded (con Hanken Grotesk de respaldo)
@@ -134,7 +157,7 @@ Sistema mixto: superficies mayormente planas sobre el fondo, con profundidad rea
 
 ## Shapes
 
-Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores estándar; `4px` en tarjetas y el formulario. Sin esquinas muy redondeadas ni esquinas a cero; el badge de disponibilidad y las etiquetas (`tags`) usan cápsula completa (`100px`) como único elemento circular del sistema, junto al punto del cursor y el sello de la línea de tiempo.
+Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores estándar; `4px` en tarjetas y el formulario. Sin esquinas muy redondeadas ni esquinas a cero; el badge de disponibilidad y las etiquetas (`tags`) usan cápsula completa (`100px`) como único elemento circular del sistema, junto al punto del cursor y el sello de la línea de tiempo. Las tarjetas flotantes de servicios (`.ledger__row`) son la única excepción deliberada: usan `20px` (`rounded.lg`), un radio más generoso propio de su tratamiento de cristal esmerilado, para diferenciarse visualmente de las tarjetas planas estándar.
 
 ## Components
 
@@ -149,6 +172,9 @@ Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores est
 - **Shadow Strategy:** ver Elevación — solo la ventana de código y los mockups llevan sombra; las tarjetas de contacto y el formulario van planos con borde.
 - **Border:** `1px solid var(--border)`.
 
+### Tarjetas de cristal (servicios)
+Variante de tarjeta reservada al listado de servicios (`.ledger__row`) y al botón secundario del hero (`.btn--glass`): fondo semitransparente (`rgba(22,24,41,.46–.5)`) con `backdrop-filter: blur(18px)`, radio `20px` (`rounded.lg`) y sombra difusa amplia. Las tarjetas flotan con una animación vertical sutil y desfasada entre sí, que se pausa al hover o foco para no interferir con la lectura.
+
 ### Inputs / Fields
 - **Style:** fondo `--bg`, borde `--border`, radio `3px`.
 - **Focus:** borde azul eléctrico + halo `0 0 0 3px rgba(110,168,255,.14)`.
@@ -161,7 +187,10 @@ Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores est
 Isotipo de Marco: anillo rectangular redondeado con dos vértices de llave (`{` `}`) en los costados y un trazo tipo `Ʒ` en el interior. Vive como `<symbol id="marcaKordev">` en el sprite de `index.html` y se invoca con `<use>`, de forma que hereda el color del contexto (`currentColor`) y siempre va en el verde de acento. Tres usos: lockup de navegación y pie (marca 30px + «KORDEV» en Unbounded 700, mayúsculas, tracking `.15em`), pantalla de carga (62px con halo verde sobre el contador) y favicon (`favicon.svg`, marca sobre cuadrado redondeado `--bg`). El archivo suelto vive en `assets/img/logo.svg`.
 
 ### Ventana proyecto.js (componente de firma)
-Panel de código con barra de tres puntos (violeta/azul/verde) y título de archivo en mono. El código se teclea carácter a carácter con ritmo irregular, se detiene brevemente antes de imprimir la salida `> listo` y remata con un pulso de color al terminar. Respeta `prefers-reduced-motion` mostrando el contenido ya completo.
+Panel de código con barra de tres puntos (violeta/azul/verde) y título de archivo en mono. El código se teclea carácter a carácter con ritmo irregular, se detiene brevemente antes de imprimir la salida `> listo` y remata con un pulso de color al terminar. Respeta `prefers-reduced-motion` mostrando el contenido ya completo. El resaltado de sintaxis usa los tres acentos de marca para claves/funciones/strings, más `syntax-comment` y `syntax-number` (ver Sub-paletas) para comentarios y literales numéricos, siguiendo la convención de un editor de código real.
+
+### Mockups de navegador y móvil
+Ventanas "objeto" que enmarcan las capturas de proyectos reales. El mockup de móvil usa `device-bezel` como color de marco y fondo, un tono propio pensado para leerse como carcasa física, no como superficie de la interfaz.
 
 ### Nebulosa de fondo (componente de firma)
 Canvas fijo a pantalla completa detrás de todo el contenido, con cuatro manchas radiales (violeta, verde, azul, violeta claro) que se desplazan lentamente mediante funciones seno/coseno. Sirve de fondo ambiental para toda la página, no solo el hero.

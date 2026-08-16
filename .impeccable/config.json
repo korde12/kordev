@@ -1,0 +1,20 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-color",
+        "value": "#25d366",
+        "createdAt": "2026-08-16T10:50:49.933Z",
+        "reason": "Color oficial de marca de WhatsApp para el boton flotante y su sombra; debe coincidir con el icono real de WhatsApp, no con el acento verde del sitio"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(37,211,102,.7)",
+        "createdAt": "2026-08-16T10:50:54.565Z",
+        "reason": "Sombra a juego con el verde oficial de WhatsApp del boton flotante, no con el acento del sitio"
+      }
+    ]
+  }
+}
