@@ -22,6 +22,10 @@
   --accent-3:      #b98bff;
   --accent-glow:   rgba(46, 245, 143, .3);
 
+  /* Marcas ajenas: cada canal de contacto lleva su color oficial */
+  --whatsapp:      #25d366;
+  --gmail:         #ea4335;
+
   --radius:        3px;
   --radius-lg:     4px;
   --maxw:          1180px;
@@ -760,127 +764,90 @@ body.is-loading{ overflow:hidden; }
 .timeline__body p{ color:var(--text-dim); font-size:.93rem; }
 
 /* =========================================================
-   CONTACTO
+   CONTACTO — tres canales directos
+   El de WhatsApp pesa más: ocupa una columna más ancha y es el
+   único que lleva nota de apoyo, porque es la vía por la que
+   Marco responde antes.
    ========================================================= */
-.contact{
+.canales{
   display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:28px;
-  align-items:start;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:20px;
+  align-items:stretch;
 }
 
-.form{
-  padding:34px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-}
-.form__row{
+.canal{
+  --canal-color:var(--accent-2);
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-.field{ margin-bottom:18px; }
-.field label{
-  display:block;
-  margin-bottom:8px;
-  font-size:.78rem;
-  font-weight:600;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-  color:var(--text-dim);
-}
-.field label span{ color:var(--accent); }
-
-.field input,
-.field select,
-.field textarea{
-  width:100%;
-  padding:13px 15px;
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  color:var(--text);
-  font-family:var(--font);
-  font-size:.95rem;
-  transition:border-color .2s ease, box-shadow .2s ease;
-  resize:vertical;
-}
-.field input::placeholder,
-.field textarea::placeholder{ color:var(--text-faint); }
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  outline:none;
-  border-color:var(--accent-2);
-  box-shadow:0 0 0 3px rgba(110,168,255,.14);
-}
-.field select{ appearance:none; cursor:pointer;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa1b4' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:right 14px center;
-  background-size:16px;
-  padding-right:40px;
-}
-.field select option{ background:var(--surface); }
-.field.has-error input,
-.field.has-error textarea{ border-color:var(--accent-3); }
-
-.form__note{
-  margin-top:14px;
-  font-size:.86rem;
-  text-align:center;
-  color:var(--text-faint);
-  min-height:20px;
-}
-.form__note.is-ok{ color:var(--accent); }
-.form__note.is-err{ color:var(--accent-3); }
-
-.contact__side{ display:grid; gap:18px; }
-.contact__card{
-  padding:28px 26px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-}
-.contact__card h3{
-  font-family:var(--display);
-  font-weight:700;
-  text-transform:uppercase;
-  font-size:1rem;
-  margin-bottom:10px;
-}
-.contact__card > p{ color:var(--text-dim); font-size:.92rem; margin-bottom:20px; }
-
-.contact__card--accent{
-  background:linear-gradient(150deg, rgba(46,245,143,.1), rgba(110,168,255,.05));
-  border-color:rgba(46,245,143,.28);
-}
-.contact__card--accent > p{ margin-bottom:0; }
-
-.contact__link{
-  display:flex;
+  grid-template-columns:auto 1fr;
   align-items:center;
-  gap:14px;
-  padding:13px;
-  margin-bottom:10px;
+  gap:6px 16px;
+  padding:24px 22px;
+  border-radius:20px;
+  background:rgba(22,24,41,.46);
   border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  background:var(--bg);
-  transition:border-color .2s ease, transform .2s ease;
+  box-shadow:0 30px 60px -36px rgba(0,0,0,.7);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  animation:tarjetaFlota 6.4s ease-in-out infinite;
+  animation-delay:calc(var(--flota-retraso, 0) * 1s);
+  will-change:translate;
+  transition:border-color .3s ease, box-shadow .3s ease;
 }
-.contact__link:last-child{ margin-bottom:0; }
-.contact__link:hover{ border-color:var(--accent-2); transform:translateX(4px); }
-.contact__link svg{ width:22px; height:22px; flex:none; color:var(--accent-2); }
-.contact__link span{ display:flex; flex-direction:column; min-width:0; }
-.contact__link strong{ font-size:.86rem; text-transform:uppercase; letter-spacing:.02em; }
-.contact__link em{
+.canal--wa  { --canal-color:var(--whatsapp); --flota-retraso:0; }
+.canal--tel { --canal-color:var(--accent-2); --flota-retraso:1.1; }
+.canal--mail{ --canal-color:var(--gmail);    --flota-retraso:2.2; }
+
+.canal:hover,
+.canal:focus-visible{
+  border-color:var(--canal-color);
+  box-shadow:0 34px 70px -34px rgba(0,0,0,.8), 0 0 0 1px var(--canal-color);
+  animation-play-state:paused;
+}
+
+.canal svg{
+  width:26px; height:26px;
+  flex:none;
+  color:var(--canal-color);
+}
+.canal--wa svg{ width:32px; height:32px; }
+
+.canal__texto{ display:flex; flex-direction:column; min-width:0; }
+.canal__texto strong{
+  font-size:.86rem;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+.canal__texto em{
   font-style:normal;
   font-family:var(--mono);
   font-size:.78rem;
-  color:var(--text-faint);
+  color:var(--text-dim);
   overflow:hidden;
   text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.canal__nota{
+  grid-column:2;
+  margin-top:2px;
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--canal-color);
+}
+
+.contacto__nota{
+  margin:34px auto 0;
+  max-width:52ch;
+  text-align:center;
+  font-size:.92rem;
+  color:var(--text-dim);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .canal{ animation:none; }
 }
 
 /* =========================================================
@@ -903,8 +870,8 @@ body.is-loading{ overflow:hidden; }
   display:grid;
   place-items:center;
   border-radius:50%;
-  background:#25d366;
-  color:#fff;
+  background:var(--whatsapp);
+  color:var(--text);
   box-shadow:0 10px 26px -8px rgba(37,211,102,.7);
   opacity:0;
   visibility:hidden;
@@ -942,7 +909,7 @@ body.is-loading{ overflow:hidden; }
   .project,
   .project--reverse{ grid-template-columns:1fr; gap:36px; }
   .project--reverse .project__media{ order:0; }
-  .contact{ grid-template-columns:1fr; }
+  .canales{ grid-template-columns:1fr; }
   .ledger{ grid-template-columns:1fr; }
   .ledger__tags{ padding-top:14px; }
 }
@@ -970,8 +937,6 @@ body.is-loading{ overflow:hidden; }
   .section{ padding:76px 0; }
   .section__head{ margin-bottom:44px; }
   .hero__actions .btn{ flex:1 1 100%; }
-  .form{ padding:24px 20px; }
-  .form__row{ grid-template-columns:1fr; gap:0; }
   .phone{ width:96px; right:0; }
   .project__media{ padding-bottom:26px; }
   .browser__hover{ display:none; }
@@ -984,4 +949,5 @@ body.is-loading{ overflow:hidden; }
   .container{ padding:0 18px; }
   .window__code{ font-size:.74rem; padding:16px; }
   .ledger__row{ padding:24px 20px; }
+  .canal{ padding:20px 18px; }
 }

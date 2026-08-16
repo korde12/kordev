@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=20260816b">
+<link rel="stylesheet" href="assets/css/styles.css?v=20260816c">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -343,89 +343,37 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <header class="section__head">
       <p class="eyebrow">// contacto</p>
       <h2 class="section__title">Cuéntame tu proyecto</h2>
-      <p class="section__sub">Rellena el formulario y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
+      <p class="section__sub">Escríbeme, llámame o mándame un email y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
     </header>
 
-    <div class="contact">
-      <form class="form" id="contactForm" novalidate>
-        <div class="form__row">
-          <div class="field">
-            <label for="nombre">Nombre <span>*</span></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o el de tu negocio" required>
-          </div>
-          <div class="field">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="600 00 00 00">
-          </div>
-        </div>
+    <div class="canales">
+      <a class="canal canal--wa" id="waLink" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="canal__texto">
+          <strong>WhatsApp</strong>
+          <em id="waText">+34 672 09 67 69</em>
+        </span>
+        <span class="canal__nota">La vía más rápida</span>
+      </a>
 
-        <div class="field">
-          <label for="email">Email <span>*</span></label>
-          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-        </div>
+      <a class="canal canal--tel" id="callLink" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="canal__texto">
+          <strong>Teléfono</strong>
+          <em id="callText">+34 672 09 67 69</em>
+        </span>
+      </a>
 
-        <div class="form__row">
-          <div class="field">
-            <label for="tipo">¿Qué necesitas?</label>
-            <select id="tipo" name="tipo">
-              <option>Página web a medida</option>
-              <option>Tienda online</option>
-              <option>Landing page / reservas</option>
-              <option>Mejorar mi web actual</option>
-              <option>Todavía no lo tengo claro</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="presupuesto">Presupuesto aproximado</label>
-            <select id="presupuesto" name="presupuesto">
-              <option>Prefiero que me orientes</option>
-              <option>Menos de 500 €</option>
-              <option>500 € - 1.500 €</option>
-              <option>1.500 € - 3.000 €</option>
-              <option>Más de 3.000 €</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="mensaje">Cuéntame un poco más <span>*</span></label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿A qué te dedicas? ¿Qué te gustaría conseguir con la web?" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn--primary btn--lg btn--block">
-          Enviar y pedir presupuesto
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <p class="form__note" id="formNote" role="status"></p>
-      </form>
-
-      <aside class="contact__side">
-        <div class="contact__card">
-          <h3>¿Prefieres hablarlo directamente?</h3>
-          <p>Escríbeme por WhatsApp o llámame. Te contesto rápido y sin compromiso.</p>
-
-          <a class="contact__link" id="waLink" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
-            <span><strong>WhatsApp</strong><em id="waText">+34 672 09 67 69</em></span>
-          </a>
-
-          <a class="contact__link" id="mailLink" href="mailto:corderojuradomarco@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-            <span><strong>Email</strong><em>corderojuradomarco@gmail.com</em></span>
-          </a>
-
-          <a class="contact__link" id="callLink" href="#">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            <span><strong>Teléfono</strong><em id="callText">+34 672 09 67 69</em></span>
-          </a>
-        </div>
-
-        <div class="contact__card contact__card--accent">
-          <h3>Respuesta en 24 h</h3>
-          <p>Primera consulta y presupuesto siempre gratis. Si el proyecto no encaja, te lo digo desde el principio.</p>
-        </div>
-      </aside>
+      <a class="canal canal--mail" id="mailLink" href="mailto:corderojuradomarco@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <span class="canal__texto">
+          <strong>Email</strong>
+          <em>corderojuradomarco@gmail.com</em>
+        </span>
+      </a>
     </div>
+
+    <p class="contacto__nota">Primera consulta y presupuesto siempre gratis. Si el proyecto no encaja, te lo digo desde el principio.</p>
   </div>
 </section>
 
@@ -472,6 +420,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 }
 </script>
 
-<script src="assets/js/main.js?v=20260814"></script>
+<script src="assets/js/main.js?v=20260816c"></script>
 </body>
 </html>

@@ -12,13 +12,7 @@ const CONFIG = {
   telefonoVisible: '+34 672 09 67 69',
 
   // Tu email de contacto
-  email: 'corderojuradomarco@gmail.com',
-
-  // OPCIONAL: si algún día quieres recibir el formulario por email de verdad,
-  // crea una cuenta gratis en https://formspree.io y pega aquí tu endpoint.
-  // Ejemplo: 'https://formspree.io/f/xxxxxxx'
-  // Si lo dejas vacío, el formulario abrirá WhatsApp con el mensaje ya escrito.
-  formEndpoint: ''
+  email: 'corderojuradomarco@gmail.com'
 };
 
 /* ---------------------------------------------------------
@@ -215,87 +209,7 @@ const CONFIG = {
 })();
 
 /* ---------------------------------------------------------
-   4. Formulario de contacto
-   --------------------------------------------------------- */
-(function formulario() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  const nota = document.getElementById('formNote');
-  const boton = form.querySelector('button[type="submit"]');
-
-  const aviso = (msg, tipo) => {
-    nota.textContent = msg;
-    nota.className = 'form__note' + (tipo ? ` is-${tipo}` : '');
-  };
-
-  const validar = () => {
-    let ok = true;
-    form.querySelectorAll('[required]').forEach(campo => {
-      const grupo = campo.closest('.field');
-      const vacio = !campo.value.trim();
-      const emailMal = campo.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(campo.value.trim());
-      const malo = vacio || emailMal;
-      grupo.classList.toggle('has-error', malo);
-      if (malo) ok = false;
-    });
-    return ok;
-  };
-
-  form.querySelectorAll('[required]').forEach(campo => {
-    campo.addEventListener('input', () => campo.closest('.field').classList.remove('has-error'));
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (!validar()) {
-      aviso('Revisa los campos marcados en rojo.', 'err');
-      return;
-    }
-
-    const d = Object.fromEntries(new FormData(form).entries());
-
-    // --- Opción A: endpoint configurado (Formspree u otro) ---
-    if (CONFIG.formEndpoint) {
-      const textoOriginal = boton.innerHTML;
-      boton.disabled = true;
-      boton.textContent = 'Enviando…';
-      try {
-        const res = await fetch(CONFIG.formEndpoint, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-        if (!res.ok) throw new Error('Respuesta no válida');
-        form.reset();
-        aviso('¡Mensaje enviado! Te respondo en menos de 24 h.', 'ok');
-      } catch (err) {
-        aviso('No se pudo enviar. Escríbeme por WhatsApp o a ' + CONFIG.email, 'err');
-      } finally {
-        boton.disabled = false;
-        boton.innerHTML = textoOriginal;
-      }
-      return;
-    }
-
-    // --- Opción B (por defecto): abrir WhatsApp con el mensaje ya escrito ---
-    const mensaje =
-      `¡Hola Marco! Quiero pedirte presupuesto.\n\n` +
-      `• Nombre: ${d.nombre}\n` +
-      `• Email: ${d.email}\n` +
-      (d.telefono ? `• Teléfono: ${d.telefono}\n` : '') +
-      `• Necesito: ${d.tipo}\n` +
-      `• Presupuesto: ${d.presupuesto}\n\n` +
-      `${d.mensaje}`;
-
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`, '_blank', 'noopener');
-    aviso('Se ha abierto WhatsApp con tu mensaje listo para enviar.', 'ok');
-  });
-})();
-
-/* ---------------------------------------------------------
-   5. Ventana "proyecto.js": tecleo real, no un parpadeo fijo.
+   4. Ventana "proyecto.js": tecleo real, no un parpadeo fijo.
    Se escribe carácter a carácter con ritmo irregular (como
    alguien tecleando de verdad) y "ejecuta" con una pausa y
    un pulso al terminar. Una sola pasada, no en bucle.

@@ -18,6 +18,7 @@ colors:
   syntax-number: "#fbbf24"
   device-bezel: "#1b1e28"
   whatsapp-brand: "#25d366"
+  gmail-brand: "#ea4335"
 typography:
   display:
     fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
@@ -119,7 +120,7 @@ Casi negro azulado como base, con tres acentos saturados (verde terminal, azul e
 ### Sub-paletas con contexto propio
 Tres familias de color viven fuera de la paleta principal a propósito, porque responden a una convención distinta a la del sitio:
 - **Resaltado de sintaxis** (`syntax-comment` `#5c6478`, `syntax-number` `#fbbf24`): dentro de `proyecto.js`, comentarios y números siguen la convención de un editor de código, no el acento de marca.
-- **Marca de WhatsApp** (`whatsapp-brand` `#25d366`): el botón flotante y su icono deben coincidir con el verde oficial de WhatsApp, no con el verde de acento del sitio — es una identidad ajena, no una elección de kordev.
+- **Marcas de los canales de contacto** (`whatsapp-brand` `#25d366`, `gmail-brand` `#ea4335`): cada canal de contacto y el botón flotante llevan el color oficial de su aplicación, no el acento del sitio — son identidades ajenas que el visitante reconoce antes de leer la etiqueta. El canal de teléfono no tiene marca propia, así que usa el azul eléctrico del sistema.
 - **Bisel de dispositivo** (`device-bezel` `#1b1e28`): el marco del mockup de móvil es un tono propio, ligeramente más claro que `surface`, para leerse como el borde físico de un teléfono y no como una tarjeta más.
 
 ## Typography
@@ -173,7 +174,10 @@ Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores est
 - **Border:** `1px solid var(--border)`.
 
 ### Tarjetas de cristal (servicios)
-Variante de tarjeta reservada al listado de servicios (`.ledger__row`) y al botón secundario del hero (`.btn--glass`): fondo semitransparente (`rgba(22,24,41,.46–.5)`) con `backdrop-filter: blur(18px)`, radio `20px` (`rounded.lg`) y sombra difusa amplia. Las tarjetas flotan con una animación vertical sutil y desfasada entre sí, que se pausa al hover o foco para no interferir con la lectura.
+Variante de tarjeta reservada al listado de servicios (`.ledger__row`), a los canales de contacto (`.canal`) y al botón secundario del hero (`.btn--glass`): fondo semitransparente (`rgba(22,24,41,.46–.5)`) con `backdrop-filter: blur(18px)`, radio `20px` (`rounded.lg`) y sombra difusa amplia. Las tarjetas flotan con una animación vertical sutil y desfasada entre sí, que se pausa al hover o foco para no interferir con la lectura.
+
+### Canales de contacto
+Tres tarjetas de cristal, una por vía de contacto, en lugar de un formulario. Cada una toma el color de su aplicación en `--canal-color`, que tiñe el icono, el borde al hover y el halo. WhatsApp lleva más peso deliberadamente — columna más ancha (`1.3fr` frente a `1fr`), icono mayor y la única nota de apoyo — porque es el canal por el que Marco responde antes. Sin formulario: el visitante contacta por el medio que ya usa, sin rellenar campos.
 
 ### Inputs / Fields
 - **Style:** fondo `--bg`, borde `--border`, radio `3px`.
