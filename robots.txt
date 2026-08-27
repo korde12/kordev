@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kordev.vercel.app/sitemap.xml
+Sitemap: https://kordev.es/sitemap.xml
