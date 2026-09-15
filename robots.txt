@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kordev.es/sitemap.xml
+Sitemap: https://www.kordev.es/sitemap.xml
