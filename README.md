@@ -66,7 +66,7 @@ pregunte el nombre del proyecto, escribe `kordev`.
 
 ### Al cambiar de dominio
 
-Si algún día le pones dominio propio, busca y reemplaza `kordev.vercel.app` en
+El dominio es `kordev.es`. Si cambia, busca y reemplaza `kordev.es` en
 `index.html`, `robots.txt` y `sitemap.xml`.
 
 ## Actualizar las capturas de los proyectos
@@ -74,11 +74,17 @@ Si algún día le pones dominio propio, busca y reemplaza `kordev.vercel.app` en
 Las imágenes de `assets/img/` se generaron con Chrome en modo headless:
 
 ```bash
-"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --hide-scrollbars --virtual-time-budget=15000 --window-size=1440,1000 --screenshot="assets/img/wallburguer.png" https://wallburguer.com
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --hide-scrollbars --virtual-time-budget=15000 --window-size=1440,1000 --screenshot="captura.png" https://wallburguer.com
 ```
 
 Para la versión móvil se usa `--window-size=480,1040 --force-device-scale-factor=2`
 y un user-agent de iPhone.
+
+La web sirve WebP (un PNG pesa ~10 veces más). Convierte la captura y borra el PNG:
+
+```bash
+ffmpeg -i captura.png -c:v libwebp -quality 82 -compression_level 6 assets/img/wallburguer.webp
+```
 
 ## Añadir un proyecto nuevo
 

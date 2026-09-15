@@ -15,7 +15,7 @@
 
   --text:          #f1eff7;
   --text-dim:      #a6a5bf;
-  --text-faint:    #6f6e8c;
+  --text-faint:    #8584a3;
 
   --accent:        #2ef58f;
   --accent-2:      #6ea8ff;
@@ -907,7 +907,7 @@ body.is-loading{ overflow:hidden; }
 .footer__copy{ color:var(--text-faint); font-size:.8rem; font-family:var(--mono); }
 /* Firma en tono de comentario de código, el mismo verbo visual que
    "// Así empieza cada proyecto" en la ventana proyecto.js del hero. */
-.footer__sign{ color:#5c6478; font-style:italic; margin-left:6px; }
+.footer__sign{ color:var(--text-faint); font-style:italic; margin-left:6px; }
 
 .fab{
   position:fixed;

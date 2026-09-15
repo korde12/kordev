@@ -10,7 +10,7 @@ colors:
   border-soft: "#1a1c2f"
   text: "#f1eff7"
   text-dim: "#a6a5bf"
-  text-faint: "#6f6e8c"
+  text-faint: "#8584a3"
   accent-green: "#2ef58f"
   accent-blue: "#6ea8ff"
   accent-violet: "#b98bff"
@@ -112,7 +112,7 @@ Casi negro azulado como base, con tres acentos saturados (verde terminal, azul e
 - **Superficie** (`#10101f`) / **Superficie elevada** (`#161829`): tarjetas, ventana de código, formulario.
 - **Borde** (`#262a42`) / **Borde suave** (`#1a1c2f`): separadores y contornos de tarjeta.
 - **Texto** (`#f1eff7`): texto principal sobre fondo oscuro.
-- **Texto atenuado** (`#a6a5bf`) / **Texto tenue** (`#6f6e8c`): cuerpo secundario y metadatos.
+- **Texto atenuado** (`#a6a5bf`) / **Texto tenue** (`#8584a3`, mínimo AA 4.5:1 sobre las ventanas `#161829`): cuerpo secundario y metadatos.
 
 ### Named Rules
 **The One Nebula Rule.** El degradado de tres colores completo solo vive en el canvas de fondo. En componentes de UI, cada superficie usa como máximo un acento saturado a la vez.
