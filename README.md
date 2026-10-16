@@ -95,6 +95,14 @@ a 480x1040 para que no pese de más.
 ffmpeg -i captura-movil.png -vf scale=480:1040 -c:v libwebp -quality 82 -compression_level 6 assets/img/wallburguer-mobile.webp
 ```
 
+De la captura de escritorio hacen falta **dos tamaños**: la de 1440 px (pantallas
+retina) y una de 800 px que es la que se baja el móvil. El `srcset` del `index.html`
+elige sola la que toque.
+
+```bash
+ffmpeg -i captura.png -vf scale=800:556 -c:v libwebp -quality 82 -compression_level 6 assets/img/wallburguer-800.webp
+```
+
 ## Añadir un proyecto nuevo
 
 Copia un bloque `<article class="project">` completo en `index.html`, cambia
