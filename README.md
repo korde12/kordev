@@ -1,7 +1,7 @@
 # Portfolio — Marco Cordero
 
 Landing page de portfolio para captar clientes: muestra los proyectos reales
-(Wall Burger y The Factory Phone) y lleva a **agendar cita / pedir presupuesto**.
+(Wall Burger, The Factory Phone y Tapisol) y lleva a **agendar cita / pedir presupuesto**.
 
 HTML, CSS y JavaScript puros. Sin dependencias, sin compilar nada.
 
@@ -38,7 +38,7 @@ Si prefieres recibirlo por email, crea una cuenta gratuita en
 
 Abre `index.html` con doble clic. Ya está.
 
-## Publicarla en Vercel (kordev.vercel.app)
+## Publicarla en Vercel (kordev.es)
 
 La carpeta ya es un repositorio git con el primer commit hecho y lleva
 `vercel.json` con cabeceras de caché y seguridad.
@@ -54,7 +54,8 @@ La carpeta ya es un repositorio git con el primer commit hecho y lleva
 
 3. Entra en <https://vercel.com/new>, importa el repositorio `kordev` y pulsa
    **Deploy**. No hay que configurar nada: es una web estática.
-4. Queda publicada en `https://kordev.vercel.app`.
+4. Queda publicada en `https://www.kordev.es` (el dominio principal en Vercel es
+   `www`; `kordev.es` responde 308 hacia él).
 
 A partir de ahí, cada `git push` la actualiza sola.
 
@@ -66,7 +67,8 @@ pregunte el nombre del proyecto, escribe `kordev`.
 
 ### Al cambiar de dominio
 
-El dominio es `kordev.es`. Si cambia, busca y reemplaza `kordev.es` en
+El dominio es `https://www.kordev.es` (con `www`: es el principal en Vercel).
+Si cambia, busca y reemplaza `www.kordev.es` en
 `index.html`, `robots.txt` y `sitemap.xml`.
 
 ## Actualizar las capturas de los proyectos
@@ -84,6 +86,13 @@ La web sirve WebP (un PNG pesa ~10 veces más). Convierte la captura y borra el 
 
 ```bash
 ffmpeg -i captura.png -c:v libwebp -quality 82 -compression_level 6 assets/img/wallburguer.webp
+```
+
+La captura móvil sale a 960x2080, pero en pantalla el móvil mide 130 px: reescálala
+a 480x1040 para que no pese de más.
+
+```bash
+ffmpeg -i captura-movil.png -vf scale=480:1040 -c:v libwebp -quality 82 -compression_level 6 assets/img/wallburguer-mobile.webp
 ```
 
 ## Añadir un proyecto nuevo

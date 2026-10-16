@@ -279,7 +279,7 @@ body.is-loading{ overflow:hidden; }
   display:none;
   flex-direction:column;
   gap:5px;
-  width:42px; height:42px;
+  width:44px; height:44px;
   align-items:center;
   justify-content:center;
   background:transparent;
@@ -677,6 +677,8 @@ body.is-loading{ overflow:hidden; }
 }
 .phone img{
   border-radius:12px;
+  width:100%;
+  height:auto;
   aspect-ratio:480/1040;
   object-fit:cover;
   object-position:top center;

@@ -12,7 +12,7 @@ Dueños de negocios locales de hostelería y retail (bares, restaurantes, tienda
 
 ## Product Purpose
 
-Landing page de portfolio para kordev, la marca freelance de Marco Cordero. Muestra proyectos reales (Wall Burger, The Factory Phone) para generar confianza y lleva al visitante a agendar cita o pedir presupuesto por WhatsApp.
+Landing page de portfolio para kordev, la marca freelance de Marco Cordero. Muestra proyectos reales (Wall Burger, The Factory Phone, Tapisol) para generar confianza y lleva al visitante a agendar cita o pedir presupuesto por WhatsApp.
 
 ## Positioning
 
@@ -20,7 +20,7 @@ Entrega rápida: proyectos en semanas, no meses, frente a agencias más lentas. 
 
 ## Operating Context
 
-- Sitio estático (HTML/CSS/JS puro, sin build), desplegado en Vercel (kordev.vercel.app).
+- Sitio estático (HTML/CSS/JS puro, sin build), desplegado en Vercel (kordev.es).
 - El formulario de contacto abre WhatsApp con los datos precargados (sin backend); admite opcionalmente Formspree para email.
 - Marco es autodidacta, viene de ser técnico de TPV en hostelería y ahora empieza el grado DAW en Ilerna para formalizar lo que ya hace en producción.
 
