@@ -89,7 +89,6 @@ Rechazado explícitamente: el tema oscuro con acento neón único y bordes con r
 **Key Characteristics:**
 - Fondo de nebulosa animada en canvas (violeta, verde, azul) que se mueve muy despacio detrás de toda la página.
 - Titulares en Unbounded, mayúsculas, a escala de cartel.
-- Cursor propio con estela que se agranda sobre elementos interactivos.
 - Contador de carga 0→100 antes de revelar la página.
 - Componentes reales (proyecto.js, mockups de navegador/móvil) como prueba, no decoración.
 
@@ -158,7 +157,7 @@ Sistema mixto: superficies mayormente planas sobre el fondo, con profundidad rea
 
 ## Shapes
 
-Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores estándar; `4px` en tarjetas y el formulario. Sin esquinas muy redondeadas ni esquinas a cero; el badge de disponibilidad y las etiquetas (`tags`) usan cápsula completa (`100px`) como único elemento circular del sistema, junto al punto del cursor y el sello de la línea de tiempo. Las tarjetas flotantes de servicios (`.ledger__row`) son la única excepción deliberada: usan `20px` (`rounded.lg`), un radio más generoso propio de su tratamiento de cristal esmerilado, para diferenciarse visualmente de las tarjetas planas estándar.
+Esquinas discretas y consistentes: `3px` en botones, entradas y contenedores estándar; `4px` en tarjetas y el formulario. Sin esquinas muy redondeadas ni esquinas a cero; el badge de disponibilidad y las etiquetas (`tags`) usan cápsula completa (`100px`) como único elemento circular del sistema, junto al sello de la línea de tiempo. Las tarjetas flotantes de servicios (`.ledger__row`) son la única excepción deliberada: usan `20px` (`rounded.lg`), un radio más generoso propio de su tratamiento de cristal esmerilado, para diferenciarse visualmente de las tarjetas planas estándar.
 
 ## Components
 
@@ -209,7 +208,7 @@ Canvas fijo a pantalla completa detrás de todo el contenido, con cuatro manchas
 - **Do** mantener el degradado completo de la nebulosa únicamente en el canvas de fondo; los componentes de UI usan un acento saturado a la vez (The One Nebula Rule).
 - **Do** usar Unbounded en mayúsculas solo para titulares y etiquetas cortas; el cuerpo siempre en minúsculas.
 - **Do** dar sombra y perspectiva solo a los elementos "objeto" (ventana de código, mockups); el resto de la interfaz va plano.
-- **Do** respetar `prefers-reduced-motion` en la nebulosa, el cursor, el contador de carga y la animación de `proyecto.js`.
+- **Do** respetar `prefers-reduced-motion` en la nebulosa, el contador de carga y la animación de `proyecto.js`.
 
 ### Don't:
 - **Don't** volver al trío verde/cian/violeta neón de la dirección anterior ni al horizonte de rejilla en perspectiva.

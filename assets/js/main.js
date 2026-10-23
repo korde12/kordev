@@ -95,39 +95,6 @@ const CONFIG = {
 })();
 
 /* ---------------------------------------------------------
-   0b. Cursor con estela de distorsión (solo puntero fino)
-   --------------------------------------------------------- */
-(function cursorPersonalizado() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (!window.matchMedia('(pointer: fine)').matches) return;
-
-  const cursor = document.getElementById('cursor');
-  if (!cursor) return;
-
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let cx = mx, cy = my;
-
-  window.addEventListener('mousemove', (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    cursor.classList.add('is-active');
-  });
-
-  document.querySelectorAll('a, button, .window').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('is-hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('is-hover'));
-  });
-
-  function seguir() {
-    cx += (mx - cx) * .16;
-    cy += (my - cy) * .16;
-    cursor.style.transform = `translate(${cx}px, ${cy}px)`;
-    requestAnimationFrame(seguir);
-  }
-  requestAnimationFrame(seguir);
-})();
-
-/* ---------------------------------------------------------
    1. Datos de contacto dinámicos
    --------------------------------------------------------- */
 (function aplicarContacto() {

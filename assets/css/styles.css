@@ -1,8 +1,8 @@
 ﻿/* =========================================================
    kordev — Marco Cordero
-   Portal en órbita: nebulosa animada en canvas, cursor con
-   estela, contador de carga, titulares monumentales en
-   mayúsculas sobre índigo casi negro.
+   Portal en órbita: nebulosa animada en canvas, contador de
+   carga, titulares monumentales en mayúsculas sobre índigo
+   casi negro.
    ========================================================= */
 
 :root{
@@ -82,31 +82,6 @@ p{ margin:0; }
   height:100%;
   z-index:-1;
   pointer-events:none;
-}
-
-/* =========================================================
-   CURSOR PERSONALIZADO
-   ========================================================= */
-.cursor{
-  position:fixed;
-  top:0; left:0;
-  width:26px; height:26px;
-  margin:-13px 0 0 -13px;
-  border-radius:50%;
-  border:1px solid rgba(241,239,247,.55);
-  background:radial-gradient(circle at 35% 30%, rgba(46,245,143,.35), transparent 70%);
-  pointer-events:none;
-  z-index:9999;
-  mix-blend-mode:screen;
-  opacity:0;
-  transform:scale(1);
-  transition:opacity .3s ease, transform .25s ease, border-color .25s ease, background .25s ease;
-}
-.cursor.is-active{ opacity:1; }
-.cursor.is-hover{
-  transform:scale(2);
-  border-color:rgba(46,245,143,.7);
-  background:radial-gradient(circle at 35% 30%, rgba(46,245,143,.5), transparent 72%);
 }
 
 /* =========================================================
