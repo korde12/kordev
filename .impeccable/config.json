@@ -25,6 +25,11 @@
         "rule": "design-system-font-size",
         "value": ".68rem",
         "createdAt": "2026-09-15T10:28:27.427Z"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "10px",
+        "createdAt": "2026-10-23T09:39:57.235Z"
       }
     ]
   }
