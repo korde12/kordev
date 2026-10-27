@@ -35,6 +35,11 @@
         "rule": "design-system-font",
         "value": "hanken fallback",
         "createdAt": "2026-10-27T12:12:14.657Z"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "3.4rem",
+        "createdAt": "2026-10-27T12:27:03.976Z"
       }
     ]
   }

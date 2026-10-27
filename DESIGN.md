@@ -26,6 +26,13 @@ typography:
     fontWeight: 800
     lineHeight: 1.05
     letterSpacing: "-0.015em"
+  display-largo:
+    fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
+    fontSize: "clamp(1rem, 8.7vw, 3.4rem)"
+    fontWeight: 800
+    lineHeight: 1.05
+    letterSpacing: "-0.015em"
+    uso: "titulares de las paginas de servicio, con palabras largas tipo RESTAURANTES"
   headline:
     fontFamily: "Unbounded, Hanken Grotesk, sans-serif"
     fontSize: "clamp(1.8rem, 4vw, 2.9rem)"
@@ -125,6 +132,12 @@ Tres familias de color viven fuera de la paleta principal a propósito, porque r
 ## Typography
 
 **Display Font:** Unbounded (con Hanken Grotesk de respaldo)
+
+El titular del hero tiene dos escalas. La normal (`display`) es la de la portada.
+Las paginas de servicio usan `display-largo` (`.hero__title--largo`): mismo peso y
+misma caja, pero crece con el ancho de pantalla en vez de partir de un minimo fijo.
+Sin ella, una palabra como RESTAURANTES se sale de un movil de 320-375px y en
+escritorio ensancha su columna de la rejilla, estrechando la ventana de codigo.
 **Body Font:** Hanken Grotesk (con `Hanken Fallback` de respaldo)
 
 `Hanken Fallback` no es una tipografía de marca: es un `@font-face` que apunta a la

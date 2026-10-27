@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiendas online en Lebrija | E-commerce a medida — kordev</title>
+<meta name="description" content="Monto tiendas online a medida en Lebrija (Sevilla): catálogo, carrito, pago con tarjeta y un panel para que lleves tú los productos y los precios. Presupuesto cerrado y gratis.">
+<meta name="theme-color" content="#05050c">
+<meta name="author" content="Marco Cordero">
+<link rel="canonical" href="https://www.kordev.es/tiendas-online-lebrija">
+
+<!-- Open Graph / redes sociales y WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="kordev">
+<meta property="og:url" content="https://www.kordev.es/tiendas-online-lebrija">
+<meta property="og:title" content="Tiendas online en Lebrija | E-commerce a medida">
+<meta property="og:description" content="Tiendas online a medida para negocios de Lebrija y Sevilla: catálogo, carrito, pagos con tarjeta y panel de gestión propio.">
+<meta property="og:image" content="https://www.kordev.es/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261027a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+</head>
+<body>
+
+<!-- ============ MARCA (sprite reutilizable) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="marcaKordev" viewBox="0 0 128 114">
+    <g fill="none" stroke="currentColor">
+      <path stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="4" d="M34 6.5H94A14.5 14.5 0 0 1 108.5 21V38C108.5 48 114 49 120 57C114 65 108.5 66 108.5 76V93A14.5 14.5 0 0 1 94 107.5H34A14.5 14.5 0 0 1 19.5 93V76C19.5 66 14 65 8 57C14 49 19.5 48 19.5 38V21A14.5 14.5 0 0 1 34 6.5Z"/>
+      <path stroke-width="15" stroke-linejoin="round" stroke-linecap="butt" d="M68 21.5C80 29 80 47 51 56.5C80 66 80 84 69 92.5"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg class="loader__mark"><use href="#marcaKordev"/></svg>
+  <span class="loader__count" id="loaderCount">0</span>
+  <span class="loader__label">Cargando kordev</span>
+</div>
+
+<!-- ============ FONDO NEBULOSA ============ -->
+<canvas class="nebula" id="nebula" aria-hidden="true"></canvas>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="/" class="logo" aria-label="kordev, ir al inicio">
+      <svg class="logo__mark" aria-hidden="true" focusable="false"><use href="#marcaKordev"/></svg>
+      <span class="logo__word">kordev</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="/#servicios">Servicios</a>
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#proceso">Cómo trabajo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" id="navWaLink" target="_blank" rel="noopener" class="btn btn--sm btn--primary nav__cta">Agendar cita</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="badge"><span class="badge__dot"></span> Disponible para nuevos proyectos</p>
+      <p class="eyebrow">// tiendas online en lebrija, sevilla</p>
+
+      <h1 class="hero__title hero__title--largo">
+        Tiendas online<br>en Lebrija<br>
+        <span class="grad">que cobran solas.</span>
+      </h1>
+
+      <p class="hero__text">
+        Soy Marco, desarrollador web freelance en Lebrija. Monto
+        <strong>tiendas online a medida</strong>: catálogo, carrito, pago con tarjeta
+        y un panel desde el que cambias precios y productos tú mismo, sin llamarme
+        cada vez.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          Pedir presupuesto
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#trabajos" class="btn btn--glass btn--lg">Ver tiendas reales</a>
+      </div>
+    </div>
+
+    <div class="hero__window" aria-hidden="true">
+      <div class="window">
+        <div class="window__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="window__title">pedido.js</span>
+        </div>
+        <pre class="window__code"><code><span class="c-com">// Lo que pasa en cada venta</span>
+{
+  carrito: <span class="c-str">"3 productos"</span>,
+  pago:    <span class="c-str">"tarjeta"</span>,
+  aviso:   <span class="c-str">"email al instante"</span>,
+  panel:   <span class="c-str">"lo llevas tú"</span>
+}
+
+<span class="c-fn">cobrar</span>(pedido); <span class="c-com">// 💳</span>
+<span class="c-out">&gt; pagado<span class="caret"></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="section" id="incluye">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// qué incluye</p>
+      <h2 class="section__title">Una tienda que es tuya, no alquilada</h2>
+      <p class="section__sub">La diferencia con una plataforma de alquiler es sencilla: aquí la tienda es tuya, se adapta a cómo vendes tú y no hay una cuota mensual que pagar para seguir abierto.</p>
+    </header>
+
+    <ol class="ledger">
+      <li class="ledger__row reveal">
+        <span class="ledger__num">01</span>
+        <div class="ledger__body">
+          <h3>Catálogo con buscador y filtros</h3>
+          <p>Tus productos con fotos, variantes, precios y descripción. Y si lo que vendes se calcula por medidas, también: en Tapisol el cliente mete los metros y el precio sale solo.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Buscador y filtros</li>
+          <li>Variantes y existencias</li>
+          <li>Precio según medidas</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">02</span>
+        <div class="ledger__body">
+          <h3>Carrito y pago con tarjeta</h3>
+          <p>Pago seguro con Stripe, la misma pasarela que usan tiendas grandes. El cliente paga sin salir de tu web y a ti te llega el aviso en el momento.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Pago seguro con Stripe</li>
+          <li>Carrito que no se pierde</li>
+          <li>Email con cada pedido</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">03</span>
+        <div class="ledger__body">
+          <h3>Panel para gestionarla tú</h3>
+          <p>Entras, cambias un precio, subes una foto nueva o marcas algo como agotado. Sin tocar código y sin depender de mí para el día a día.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Alta y baja de productos</li>
+          <li>Cambio de precios</li>
+          <li>Pedidos en una lista</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">04</span>
+        <div class="ledger__body">
+          <h3>Cuentas de cliente y avisos</h3>
+          <p>Tus clientes pueden crear cuenta, ver sus pedidos y repetir compra. Cada pedido dispara los correos que toquen, al cliente y a ti.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Registro y acceso</li>
+          <li>Historial de pedidos</li>
+          <li>Avisos automáticos</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ TRABAJOS ============ -->
+<section class="section section--alt" id="trabajos">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// tiendas reales</p>
+      <h2 class="section__title">Dos tiendas mías, abiertas ahora mismo</h2>
+      <p class="section__sub">No son maquetas ni ejemplos inventados. Son dos negocios que cobran por su web, y puedes abrirlas y probarlas.</p>
+    </header>
+
+    <ol class="ledger">
+      <li class="ledger__row reveal">
+        <span class="ledger__num">01</span>
+        <div class="ledger__body">
+          <h3>The Factory Phone</h3>
+          <p>Tienda de compra, venta y reparación de móviles. Catálogo con buscador, carrito, pago con tarjeta, cuentas de cliente y formularios de reparación y tasación que llegan al correo de la tienda.</p>
+          <p><a href="https://www.thefactoryphone.es" target="_blank" rel="noopener">thefactoryphone.es</a></p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Pago con Stripe</li>
+          <li>Acceso de clientes</li>
+          <li>Emails automáticos</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">02</span>
+        <div class="ledger__body">
+          <h3>Tapisol — Lebrija</h3>
+          <p>Taller de toldos y tapicería con más de 30 años. El cliente pone sus medidas y el precio se calcula solo. Además lleva carrito de lonas y accesorios y un panel para que el taller gestione productos y precios.</p>
+          <p><a href="https://www.tapisol.es" target="_blank" rel="noopener">tapisol.es</a></p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Precio según medidas</li>
+          <li>Carrito</li>
+          <li>Panel de gestión</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p class="contacto__nota">Si lo que buscas es una web sin tienda, te lo cuento en <a href="/diseno-web-lebrija">diseño web en Lebrija</a>.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="section" id="proceso">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// cómo trabajo</p>
+      <h2 class="section__title">Del primer café a la web publicada</h2>
+      <p class="section__sub">Un proceso sencillo y sin sorpresas. Tú me cuentas, yo me encargo del resto.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">01</span>
+        <div class="timeline__body">
+          <h3>Hablamos</h3>
+          <p>Una llamada o un café para entender tu negocio, qué necesitas y a quién te diriges. Sin compromiso.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">02</span>
+        <div class="timeline__body">
+          <h3>Presupuesto cerrado</h3>
+          <p>Te paso una propuesta con lo que incluye, el precio final y los plazos. Sin letra pequeña.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">03</span>
+        <div class="timeline__body">
+          <h3>Diseño y desarrollo</h3>
+          <p>Creo la web y te voy enseñando avances para que puedas opinar y ajustar sobre la marcha.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">04</span>
+        <div class="timeline__body">
+          <h3>Lanzamiento y soporte</h3>
+          <p>Publicamos, la dejo optimizada para Google y me quedo disponible para cualquier cambio.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="section section--alt" id="preguntas">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// preguntas frecuentes</p>
+      <h2 class="section__title">Lo que todo el mundo pregunta</h2>
+    </header>
+
+    <dl class="faq">
+      <div class="faq__item reveal">
+        <dt>¿Cuánto cuesta montar una tienda online?</dt>
+        <dd>Depende de cuántos productos tengas, de si hace falta calcular precios por medidas y de cómo quieras gestionarla. Hablamos, te paso un presupuesto cerrado con el precio final y los plazos, y ahí decides. La primera consulta y el presupuesto son gratis.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Hay que pagar una cuota todos los meses?</dt>
+        <dd>A mí no, y a ninguna plataforma de alquiler tampoco, porque la tienda es tuya. Lo que sí tiene coste son el dominio y el alojamiento, que son pocos euros al año, y la comisión que cobra la pasarela de pago por cada venta, igual que en cualquier otra tienda.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Puedo cambiar yo los precios y los productos?</dt>
+        <dd>Sí, para eso está el panel. Es lo que tiene Tapisol: entran, cambian un precio o suben una foto y la tienda se actualiza sola, sin tocar código.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Cómo cobro las ventas?</dt>
+        <dd>Con Stripe, que es la pasarela que uso. El cliente paga con tarjeta dentro de tu web y el dinero va a tu cuenta. Tú recibes un email con cada pedido en el momento.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Usas Shopify, WooCommerce o Prestashop?</dt>
+        <dd>No. Programo la tienda a medida, que es lo que hace que cargue rápido y que no dependas de plugins que se rompen ni de cuotas mensuales. Si tu caso encajara mejor en una de esas plataformas, te lo diría desde el principio.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Y si lo que vendo no es un producto normal?</dt>
+        <dd>Es justo lo que pasaba en Tapisol: un toldo no tiene precio fijo, depende de los metros. Para eso se monta un configurador y el cliente lo calcula solo. Cuéntame cómo vendes y lo vemos.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// contacto</p>
+      <h2 class="section__title">Cuéntame qué vendes</h2>
+      <p class="section__sub">Escríbeme, llámame o mándame un email y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
+    </header>
+
+    <div class="canales">
+      <a class="canal canal--wa" id="waLink" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="canal__texto">
+          <strong>WhatsApp</strong>
+          <em id="waText">+34 672 09 67 69</em>
+        </span>
+        <span class="canal__nota">La vía más rápida</span>
+      </a>
+
+      <a class="canal canal--tel" id="callLink" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="canal__texto">
+          <strong>Teléfono</strong>
+          <em id="callText">+34 672 09 67 69</em>
+        </span>
+      </a>
+
+      <a class="canal canal--mail" id="mailLink" href="mailto:corderojuradomarco@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <span class="canal__texto">
+          <strong>Email</strong>
+          <em>corderojuradomarco@gmail.com</em>
+        </span>
+      </a>
+    </div>
+
+    <p class="contacto__nota">Primera consulta y presupuesto siempre gratis. Si el proyecto no encaja, te lo digo desde el principio.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="/" class="logo" aria-label="kordev, ir al inicio">
+      <svg class="logo__mark" aria-hidden="true" focusable="false"><use href="#marcaKordev"/></svg>
+      <span class="logo__word">kordev</span>
+    </a>
+    <p class="footer__text">Desarrollo web a medida en Lebrija · Sevilla</p>
+    <p class="footer__copy">© <span id="year">2026</span> Marco Cordero <span class="footer__sign">// diseñado y programado, sin plantillas</span></p>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+
+<!-- Datos estructurados: servicio concreto + preguntas frecuentes + migas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Tiendas online en Lebrija",
+  "serviceType": "Desarrollo de tiendas online a medida",
+  "description": "Desarrollo de tiendas online a medida para negocios de Lebrija y la provincia de Sevilla: catálogo, carrito, pago con tarjeta y panel de gestión propio.",
+  "url": "https://www.kordev.es/tiendas-online-lebrija",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lebrija"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Provincia de Sevilla"
+    }
+  ],
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "kordev — Marco Cordero",
+    "url": "https://www.kordev.es/",
+    "image": "https://www.kordev.es/assets/img/og.png",
+    "email": "corderojuradomarco@gmail.com",
+    "telephone": "+34672096769",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lebrija",
+      "addressRegion": "Sevilla",
+      "addressCountry": "ES"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta montar una tienda online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cuántos productos tengas, de si hace falta calcular precios por medidas y de cómo quieras gestionarla. Hablamos, te paso un presupuesto cerrado con el precio final y los plazos, y ahí decides. La primera consulta y el presupuesto son gratis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay que pagar una cuota todos los meses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A mí no, y a ninguna plataforma de alquiler tampoco, porque la tienda es tuya. Lo que sí tiene coste son el dominio y el alojamiento, que son pocos euros al año, y la comisión que cobra la pasarela de pago por cada venta, igual que en cualquier otra tienda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cambiar yo los precios y los productos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, para eso está el panel. Es lo que tiene Tapisol: entran, cambian un precio o suben una foto y la tienda se actualiza sola, sin tocar código."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo cobro las ventas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con Stripe, que es la pasarela que uso. El cliente paga con tarjeta dentro de tu web y el dinero va a tu cuenta. Tú recibes un email con cada pedido en el momento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Usas Shopify, WooCommerce o Prestashop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Programo la tienda a medida, que es lo que hace que cargue rápido y que no dependas de plugins que se rompen ni de cuotas mensuales. Si tu caso encajara mejor en una de esas plataformas, te lo diría desde el principio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si lo que vendo no es un producto normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es justo lo que pasaba en Tapisol: un toldo no tiene precio fijo, depende de los metros. Para eso se monta un configurador y el cliente lo calcula solo. Cuéntame cómo vendes y lo vemos."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.kordev.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tiendas online en Lebrija",
+      "item": "https://www.kordev.es/tiendas-online-lebrija"
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js?v=20261027a"></script>
+</body>
+</html>

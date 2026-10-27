@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Páginas web para restaurantes en Lebrija y Sevilla — kordev</title>
+<meta name="description" content="Webs para bares y restaurantes: carta digital que actualizas tú, reserva de mesa desde el móvil y pedidos por WhatsApp. Hecha a medida en Lebrija (Sevilla).">
+<meta name="theme-color" content="#05050c">
+<meta name="author" content="Marco Cordero">
+<link rel="canonical" href="https://www.kordev.es/paginas-web-para-restaurantes">
+
+<!-- Open Graph / redes sociales y WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="kordev">
+<meta property="og:url" content="https://www.kordev.es/paginas-web-para-restaurantes">
+<meta property="og:title" content="Páginas web para restaurantes en Lebrija y Sevilla">
+<meta property="og:description" content="Carta digital, reserva de mesa y pedidos por WhatsApp. Webs a medida para bares y restaurantes de Lebrija y la provincia de Sevilla.">
+<meta property="og:image" content="https://www.kordev.es/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261027a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+</head>
+<body>
+
+<!-- ============ MARCA (sprite reutilizable) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="marcaKordev" viewBox="0 0 128 114">
+    <g fill="none" stroke="currentColor">
+      <path stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="4" d="M34 6.5H94A14.5 14.5 0 0 1 108.5 21V38C108.5 48 114 49 120 57C114 65 108.5 66 108.5 76V93A14.5 14.5 0 0 1 94 107.5H34A14.5 14.5 0 0 1 19.5 93V76C19.5 66 14 65 8 57C14 49 19.5 48 19.5 38V21A14.5 14.5 0 0 1 34 6.5Z"/>
+      <path stroke-width="15" stroke-linejoin="round" stroke-linecap="butt" d="M68 21.5C80 29 80 47 51 56.5C80 66 80 84 69 92.5"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg class="loader__mark"><use href="#marcaKordev"/></svg>
+  <span class="loader__count" id="loaderCount">0</span>
+  <span class="loader__label">Cargando kordev</span>
+</div>
+
+<!-- ============ FONDO NEBULOSA ============ -->
+<canvas class="nebula" id="nebula" aria-hidden="true"></canvas>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="/" class="logo" aria-label="kordev, ir al inicio">
+      <svg class="logo__mark" aria-hidden="true" focusable="false"><use href="#marcaKordev"/></svg>
+      <span class="logo__word">kordev</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="/#servicios">Servicios</a>
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#proceso">Cómo trabajo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" id="navWaLink" target="_blank" rel="noopener" class="btn btn--sm btn--primary nav__cta">Agendar cita</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="badge"><span class="badge__dot"></span> Disponible para nuevos proyectos</p>
+      <p class="eyebrow">// webs para restaurantes en lebrija, sevilla</p>
+
+      <h1 class="hero__title hero__title--largo">
+        Páginas web<br>para restaurantes<br>
+        <span class="grad">que llenan mesas.</span>
+      </h1>
+
+      <p class="hero__text">
+        Soy Marco, desarrollador web freelance en Lebrija. Hago webs para
+        <strong>bares y restaurantes</strong>: carta digital que actualizas tú,
+        reserva de mesa desde el móvil y botón de pedido por WhatsApp. Nada de
+        cartas en PDF que no hay quien lea en el teléfono.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary btn--lg">
+          Pedir presupuesto
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#trabajos" class="btn btn--glass btn--lg">Ver un caso real</a>
+      </div>
+    </div>
+
+    <div class="hero__window" aria-hidden="true">
+      <div class="window">
+        <div class="window__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="window__title">carta.js</span>
+        </div>
+        <pre class="window__code"><code><span class="c-com">// Lo que ve tu cliente</span>
+{
+  carta:    <span class="c-str">"con fotos y precios"</span>,
+  cambios:  <span class="c-str">"los haces tú"</span>,
+  reserva:  <span class="c-str">"desde el móvil"</span>,
+  pedido:   <span class="c-str">"por WhatsApp"</span>
+}
+
+<span class="c-fn">abrir</span>(carta); <span class="c-com">// 🍔</span>
+<span class="c-out">&gt; mesa reservada<span class="caret"></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="section" id="incluye">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// qué incluye</p>
+      <h2 class="section__title">Lo que un bar necesita de verdad en su web</h2>
+      <p class="section__sub">Casi todo el mundo te busca desde el móvil, de pie en la calle y decidiendo dónde comer. La web tiene que resolver eso en diez segundos: qué tienes, cuánto cuesta y cómo reservar.</p>
+    </header>
+
+    <ol class="ledger">
+      <li class="ledger__row reveal">
+        <span class="ledger__num">01</span>
+        <div class="ledger__body">
+          <h3>Carta digital, no un PDF</h3>
+          <p>Platos por categorías, con foto, precio y alérgenos si los necesitas. Se lee del tirón en el móvil, sin pellizcar la pantalla para hacer zoom.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Categorías y fotos</li>
+          <li>Precios siempre al día</li>
+          <li>Se lee bien en el móvil</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">02</span>
+        <div class="ledger__body">
+          <h3>Los cambios los haces tú</h3>
+          <p>Sube el precio de un plato, quita lo que se ha acabado o mete el menú del día. Entras, lo cambias y ya está. No hay que esperar a nadie.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Panel sencillo</li>
+          <li>Menú del día</li>
+          <li>Sin tocar código</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">03</span>
+        <div class="ledger__body">
+          <h3>Reserva de mesa y pedido por WhatsApp</h3>
+          <p>Que el cliente reserve desde el móvil sin llamar, o que te mande el pedido por WhatsApp con todo escrito. Es lo que lleva Wall Burger y es por donde entran los mensajes.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Reserva desde el móvil</li>
+          <li>Pedido por WhatsApp</li>
+          <li>Teléfono de un toque</li>
+        </ul>
+      </li>
+
+      <li class="ledger__row reveal">
+        <span class="ledger__num">04</span>
+        <div class="ledger__body">
+          <h3>Que te encuentren buscando "dónde comer"</h3>
+          <p>Horarios, mapa y datos estructurados para que Google sepa que eres un restaurante de Lebrija. Esto, junto con tu ficha de Google, es lo que te mete en el mapa.</p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Horarios y mapa</li>
+          <li>SEO local</li>
+          <li>Ficha de Google Business</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ TRABAJOS ============ -->
+<section class="section section--alt" id="trabajos">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// caso real</p>
+      <h2 class="section__title">Wall Burger, en Lebrija</h2>
+      <p class="section__sub">Es mi proyecto de restauración y está online. Puedes abrirlo desde el móvil y ver exactamente de qué estoy hablando.</p>
+    </header>
+
+    <ol class="ledger">
+      <li class="ledger__row reveal">
+        <span class="ledger__num">01</span>
+        <div class="ledger__body">
+          <h3>Wall Burger — Lebrija</h3>
+          <p>Hamburguesería de Lebrija. Diseño oscuro con carácter, carta interactiva con precios y fotos, reserva de mesa desde el móvil y una web que carga al momento aunque estés sentado en la mesa con mala cobertura.</p>
+          <p><a href="https://wallburguer.com" target="_blank" rel="noopener">wallburguer.com</a></p>
+        </div>
+        <ul class="ledger__tags">
+          <li>Carta digital con fotos</li>
+          <li>Reserva de mesa</li>
+          <li>Diseño a medida</li>
+          <li>SEO local</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p class="contacto__nota">Tengo más trabajos, aunque de otros sectores: están en <a href="/#proyectos">la página de proyectos</a>. Y si lo tuyo no es un bar, mira <a href="/diseno-web-lebrija">diseño web en Lebrija</a>.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="section" id="proceso">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// cómo trabajo</p>
+      <h2 class="section__title">Del primer café a la web publicada</h2>
+      <p class="section__sub">Un proceso sencillo y sin sorpresas. Tú me cuentas, yo me encargo del resto.</p>
+    </header>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">01</span>
+        <div class="timeline__body">
+          <h3>Hablamos</h3>
+          <p>Una llamada o un café para entender tu negocio, qué necesitas y a quién te diriges. Sin compromiso.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">02</span>
+        <div class="timeline__body">
+          <h3>Presupuesto cerrado</h3>
+          <p>Te paso una propuesta con lo que incluye, el precio final y los plazos. Sin letra pequeña.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">03</span>
+        <div class="timeline__body">
+          <h3>Diseño y desarrollo</h3>
+          <p>Creo la web y te voy enseñando avances para que puedas opinar y ajustar sobre la marcha.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__seal">04</span>
+        <div class="timeline__body">
+          <h3>Lanzamiento y soporte</h3>
+          <p>Publicamos, la dejo optimizada para Google y me quedo disponible para cualquier cambio.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="section section--alt" id="preguntas">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// preguntas frecuentes</p>
+      <h2 class="section__title">Lo que todo el mundo pregunta</h2>
+    </header>
+
+    <dl class="faq">
+      <div class="faq__item reveal">
+        <dt>¿Cuánto cuesta la web de un bar?</dt>
+        <dd>Depende de lo que lleve: no es lo mismo una carta y poco más que una web con reservas y menú del día. Hablamos, te paso un presupuesto cerrado con el precio final y los plazos, y ahí decides. La primera consulta y el presupuesto son gratis.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>Ya tengo la carta en PDF, ¿no vale?</dt>
+        <dd>Vale, pero funciona mal. En el móvil hay que hacer zoom, no se busca dentro, tarda en abrirse y Google no lee lo que hay dentro, así que no te ayuda a aparecer. Una carta hecha como página se lee de un vistazo y sí la lee Google.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Puedo cambiar yo los precios o el menú del día?</dt>
+        <dd>Sí. Se monta un panel para que entres, cambies lo que sea y quede publicado al momento. Es lo normal en un bar: los precios se mueven y el menú cambia cada día.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Se pueden hacer reservas desde la web?</dt>
+        <dd>Sí. Wall Burger lo lleva: el cliente reserva mesa desde el móvil sin tener que llamar. Y si prefieres que te lleguen los pedidos por WhatsApp con todo escrito, también se monta así.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Y si ya estoy en Glovo o en Just Eat?</dt>
+        <dd>No se pisan. Esas plataformas se quedan una comisión de cada pedido; tu web no. Lo suyo es que la web sea el sitio donde el cliente que ya te conoce te pide directamente, y las plataformas queden para captar gente nueva.</dd>
+      </div>
+      <div class="faq__item reveal">
+        <dt>¿Trabajas solo con bares de Lebrija?</dt>
+        <dd>No. Soy de Lebrija y aquí puedo ir a verte, comer en tu bar y hacer las fotos. Pero trabajo con toda la provincia de Sevilla.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section" id="contacto">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// contacto</p>
+      <h2 class="section__title">Cuéntame cómo es tu bar</h2>
+      <p class="section__sub">Escríbeme, llámame o mándame un email y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
+    </header>
+
+    <div class="canales">
+      <a class="canal canal--wa" id="waLink" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+        <span class="canal__texto">
+          <strong>WhatsApp</strong>
+          <em id="waText">+34 672 09 67 69</em>
+        </span>
+        <span class="canal__nota">La vía más rápida</span>
+      </a>
+
+      <a class="canal canal--tel" id="callLink" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span class="canal__texto">
+          <strong>Teléfono</strong>
+          <em id="callText">+34 672 09 67 69</em>
+        </span>
+      </a>
+
+      <a class="canal canal--mail" id="mailLink" href="mailto:corderojuradomarco@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <span class="canal__texto">
+          <strong>Email</strong>
+          <em>corderojuradomarco@gmail.com</em>
+        </span>
+      </a>
+    </div>
+
+    <p class="contacto__nota">Primera consulta y presupuesto siempre gratis. Si el proyecto no encaja, te lo digo desde el principio.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="/" class="logo" aria-label="kordev, ir al inicio">
+      <svg class="logo__mark" aria-hidden="true" focusable="false"><use href="#marcaKordev"/></svg>
+      <span class="logo__word">kordev</span>
+    </a>
+    <p class="footer__text">Desarrollo web a medida en Lebrija · Sevilla</p>
+    <p class="footer__copy">© <span id="year">2026</span> Marco Cordero <span class="footer__sign">// diseñado y programado, sin plantillas</span></p>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99s.74-2.12 1-2.41c.26-.29.57-.36.76-.36h.55c.17 0 .41-.07.64.49.24.57.81 1.98.88 2.13.07.14.12.31.02.5-.09.19-.14.31-.28.48l-.42.49c-.14.14-.28.29-.12.57.16.29.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.17-.19.69-.81.88-1.09.19-.29.38-.24.64-.14.26.09 1.66.78 1.94.93.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+
+<!-- Datos estructurados: servicio concreto + preguntas frecuentes + migas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Páginas web para restaurantes",
+  "serviceType": "Diseño y desarrollo de páginas web para restaurantes",
+  "description": "Diseño y desarrollo de páginas web para bares y restaurantes de Lebrija y la provincia de Sevilla: carta digital, reserva de mesa y pedidos por WhatsApp.",
+  "url": "https://www.kordev.es/paginas-web-para-restaurantes",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Lebrija"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Provincia de Sevilla"
+    }
+  ],
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "kordev — Marco Cordero",
+    "url": "https://www.kordev.es/",
+    "image": "https://www.kordev.es/assets/img/og.png",
+    "email": "corderojuradomarco@gmail.com",
+    "telephone": "+34672096769",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lebrija",
+      "addressRegion": "Sevilla",
+      "addressCountry": "ES"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta la web de un bar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de lo que lleve: no es lo mismo una carta y poco más que una web con reservas y menú del día. Hablamos, te paso un presupuesto cerrado con el precio final y los plazos, y ahí decides. La primera consulta y el presupuesto son gratis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ya tengo la carta en PDF, ¿no vale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vale, pero funciona mal. En el móvil hay que hacer zoom, no se busca dentro, tarda en abrirse y Google no lee lo que hay dentro, así que no te ayuda a aparecer. Una carta hecha como página se lee de un vistazo y sí la lee Google."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cambiar yo los precios o el menú del día?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Se monta un panel para que entres, cambies lo que sea y quede publicado al momento. Es lo normal en un bar: los precios se mueven y el menú cambia cada día."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden hacer reservas desde la web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Wall Burger lo lleva: el cliente reserva mesa desde el móvil sin tener que llamar. Y si prefieres que te lleguen los pedidos por WhatsApp con todo escrito, también se monta así."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si ya estoy en Glovo o en Just Eat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No se pisan. Esas plataformas se quedan una comisión de cada pedido; tu web no. Lo suyo es que la web sea el sitio donde el cliente que ya te conoce te pide directamente, y las plataformas queden para captar gente nueva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas solo con bares de Lebrija?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Soy de Lebrija y aquí puedo ir a verte, comer en tu bar y hacer las fotos. Pero trabajo con toda la provincia de Sevilla."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.kordev.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Páginas web para restaurantes",
+      "item": "https://www.kordev.es/paginas-web-para-restaurantes"
+    }
+  ]
+}
+</script>
+
+<script src="assets/js/main.js?v=20261027a"></script>
+</body>
+</html>

@@ -339,6 +339,10 @@ body.is-loading{ overflow:hidden; }
   line-height:1.05;
   margin-bottom:26px;
 }
+/* Para titulares con una palabra muy larga ("RESTAURANTES"): a tamaño de
+   cartel no cabe en un móvil estrecho y se sale de la pantalla. Mismo tamaño
+   en escritorio, solo baja el mínimo. */
+.hero__title--largo{ font-size:clamp(1rem, 8.7vw, 3.4rem); }
 .grad{ color:var(--accent); }
 
 .hero__text{
@@ -1025,6 +1029,14 @@ body.is-loading{ overflow:hidden; }
   .fab{ width:50px; height:50px; right:16px; bottom:16px; }
   .timeline{ padding-left:48px; }
   .timeline__seal{ left:-48px; width:34px; height:34px; font-size:.68rem; }
+}
+
+/* Por debajo de 360px (iPhone SE y Android viejos) la tarjeta a dos columnas
+   no cabe y se sale de la pantalla: ahí el número se pone encima. */
+@media (max-width:360px){
+  .ledger__row{ grid-template-columns:1fr; gap:14px; }
+  .ledger__num{ display:flex; align-items:baseline; gap:10px; }
+  .ledger__num::before{ margin-bottom:0; }
 }
 
 @media (max-width:420px){
