@@ -30,6 +30,11 @@
         "rule": "design-system-radius",
         "value": "10px",
         "createdAt": "2026-10-23T09:39:57.235Z"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "hanken fallback",
+        "createdAt": "2026-10-27T12:12:14.657Z"
       }
     ]
   }

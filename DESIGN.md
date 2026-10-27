@@ -39,7 +39,7 @@ typography:
     lineHeight: 1.2
     letterSpacing: "0.005em"
   body:
-    fontFamily: "Hanken Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "Hanken Grotesk, Hanken Fallback, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.65
@@ -125,7 +125,12 @@ Tres familias de color viven fuera de la paleta principal a propósito, porque r
 ## Typography
 
 **Display Font:** Unbounded (con Hanken Grotesk de respaldo)
-**Body Font:** Hanken Grotesk (con system-ui de respaldo)
+**Body Font:** Hanken Grotesk (con `Hanken Fallback` de respaldo)
+
+`Hanken Fallback` no es una tipografía de marca: es un `@font-face` que apunta a la
+fuente del sistema con `size-adjust:101.1%` para que ocupe exactamente lo mismo que
+Hanken Grotesk. Sin él, el texto se dibuja más estrecho hasta que carga la fuente real
+y al entrar cambia de líneas, empujando todo lo de abajo (CLS de 0,22).
 **Label/Mono Font:** JetBrains Mono
 
 **Character:** Unbounded aporta el peso de cartel de conferencia — geométrica, sin remates, mayúsculas por defecto en los titulares. Hanken Grotesk lleva el cuerpo con una lectura neutra y cálida. JetBrains Mono queda reservado a código real y etiquetas técnicas, nunca como decoración de "aire tech".

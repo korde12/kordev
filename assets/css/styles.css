@@ -5,6 +5,18 @@
    casi negro.
    ========================================================= */
 
+/* Tipografía de respaldo con las mismas medidas que Hanken Grotesk.
+   Sin esto, el texto se dibuja más estrecho hasta que carga la fuente real
+   y, al entrar, cambia de líneas y empuja todo lo de abajo (CLS). */
+@font-face{
+  font-family:'Hanken Fallback';
+  src:local('Arial'), local('Helvetica Neue'), local('Segoe UI');
+  size-adjust:101.1%;
+  ascent-override:90%;
+  descent-override:24%;
+  line-gap-override:0%;
+}
+
 :root{
   --bg:            #05050d;
   --bg-alt:        #090a16;
@@ -31,7 +43,7 @@
   --maxw:          1180px;
 
   --display:       'Unbounded', 'Hanken Grotesk', sans-serif;
-  --font:          'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font:          'Hanken Grotesk', 'Hanken Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --mono:          'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
 
   --shadow:        0 24px 60px -22px rgba(0,0,0,.85);
@@ -905,6 +917,52 @@ body.is-loading{ overflow:hidden; }
 .fab.is-visible{ opacity:1; visibility:visible; transform:translateY(0); }
 .fab:hover{ transform:scale(1.08); }
 .fab svg{ width:29px; height:29px; }
+
+/* =========================================================
+   PREGUNTAS FRECUENTES
+   ========================================================= */
+.faq{
+  display:grid;
+  gap:0;
+  border-top:1px solid var(--border-soft);
+}
+.faq__item{
+  padding:26px 0;
+  border-bottom:1px solid var(--border-soft);
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:26px;
+  align-items:start;
+}
+.faq__item dt{
+  font-family:var(--display);
+  font-weight:600;
+  line-height:1.35;
+  color:var(--text);
+}
+.faq__item dd{
+  margin:0;
+  color:var(--text-dim);
+  line-height:1.7;
+}
+
+@media (max-width:760px){
+  .faq__item{ grid-template-columns:1fr; gap:12px; }
+}
+
+/* Enlaces dentro de texto corrido: el reset global los deja del color del
+   párrafo, así que aquí se marcan para que se vean como enlaces. */
+.ledger__body p a,
+.contacto__nota a,
+.faq__item dd a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:1px;
+}
+.ledger__body p a:hover,
+.contacto__nota a:hover,
+.faq__item dd a:hover{ color:var(--text); }
 
 /* =========================================================
    ANIMACIONES DE SCROLL
