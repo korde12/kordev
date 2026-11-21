@@ -8,15 +8,17 @@ web
 
 ## Users
 
-Dueños de negocios locales de hostelería y retail (bares, restaurantes, tiendas físicas) en Lebrija y la provincia de Sevilla, sin web o con una web anticuada/genérica, que buscan que clientes los encuentren online y les escriban directamente.
+**Público principal (desde el 21 nov 2026): quien decide una contratación.** Responsables técnicos y de selección que miran el perfil de Marco un par de minutos antes de decidir si lo llaman; buscan evidencia de que ha construido cosas reales y de que entiende lo que hizo.
+
+Público secundario, más abajo en la página: dueños de negocios locales de Lebrija y la provincia de Sevilla que buscan quien les haga la web. Las tres páginas de servicio (`/diseno-web-lebrija`, `/tiendas-online-lebrija`, `/paginas-web-para-restaurantes`) siguen atendiendo a ese público y a su SEO local.
 
 ## Product Purpose
 
-Landing page de portfolio para kordev, la marca freelance de Marco Cordero. Muestra proyectos reales (Wall Burger, The Factory Phone, Tapisol) para generar confianza y lleva al visitante a agendar cita o pedir presupuesto por WhatsApp.
+Portfolio de Marco Cordero. Demuestra, con cuatro proyectos en producción, que sabe construir y mantener software real, para que un equipo lo contrate. La captación de clientes freelance sigue viva pero pasa a segundo plano, al final de la página.
 
 ## Positioning
 
-Entrega rápida: proyectos en semanas, no meses, frente a agencias más lentas. Desarrollo 100% a medida (sin plantillas), con contacto directo con Marco sin intermediarios.
+Un junior que no viene de ejercicios: todo lo que sabe lo aprendió con algo en producción y alguien esperando. Y, antes de programar, fue técnico de TPV en bares y restaurantes, así que conoce por dentro el negocio para el que escribe código.
 
 ## Operating Context
 
@@ -38,13 +40,15 @@ Entrega rápida: proyectos en semanas, no meses, frente a agencias más lentas. 
 
 ## Evidence on Hand
 
-Dos proyectos reales completados: **Wall Burger** y **The Factory Phone** (capturas escritorio + móvil en `assets/img/`). No hay testimonios, cifras de resultados ni más clientes todavía — no inventar ninguno en trabajo futuro.
+Cuatro proyectos: **Wall Burger**, **The Factory Phone** y **Tapisol** en producción, y **Healthy Way** como demo de app (Expo) todavía sin publicar en las tiendas. No hay testimonios, cifras de resultados ni reseñas — no inventar ninguno.
+
+**El código es de los clientes y no se puede enseñar.** La prueba técnica del portfolio es el apartado «el reto» de cada proyecto: un problema real y cómo se resolvió. Todo lo que se cuente ahí debe ser verificable; nunca publicar datos internos de un cliente (CIF, IBAN, correos, credenciales, nombres de base de datos ni fallos de seguridad).
 
 ## Product Principles
 
 1. Cada proyecto mostrado debe ser real y verificable, nunca inventado o exagerado.
 2. La velocidad de entrega y el trato directo son la promesa central; el copy y el diseño deben reforzarla, no diluirla con mensajes genéricos de agencia.
-3. Objetivo de conversión único: que el visitante agende cita o pida presupuesto por WhatsApp, sin fricción añadida.
+3. El trabajo manda: la primera sección después del hero son los proyectos, y cada uno explica qué se construyó, con qué y qué problema hubo que resolver.
 4. Sin plantillas genéricas: cada decisión visual debe sentirse a medida, coherente con lo que se le vende al cliente.
 
 ## Accessibility & Inclusion

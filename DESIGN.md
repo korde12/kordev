@@ -14,7 +14,7 @@ colors:
   accent-green: "#2ef58f"
   accent-blue: "#6ea8ff"
   accent-violet: "#b98bff"
-  syntax-comment: "#5c6478"
+  syntax-comment: "#787f96"
   syntax-number: "#fbbf24"
   device-bezel: "#1b1e28"
   whatsapp-brand: "#25d366"
@@ -125,7 +125,7 @@ Casi negro azulado como base, con tres acentos saturados (verde terminal, azul e
 
 ### Sub-paletas con contexto propio
 Tres familias de color viven fuera de la paleta principal a propósito, porque responden a una convención distinta a la del sitio:
-- **Resaltado de sintaxis** (`syntax-comment` `#5c6478`, `syntax-number` `#fbbf24`): dentro de `proyecto.js`, comentarios y números siguen la convención de un editor de código, no el acento de marca.
+- **Resaltado de sintaxis** (`syntax-comment` `#787f96`, `syntax-number` `#fbbf24`): dentro de la ventana de código, comentarios y números siguen la convención de un editor, no el acento de marca. El gris de los comentarios se aclaró de `#5c6478` a `#787f96` porque el anterior daba 3,18:1 sobre la ventana y no llegaba al mínimo AA.
 - **Marcas de los canales de contacto** (`whatsapp-brand` `#25d366`, `gmail-brand` `#ea4335`): cada canal de contacto y el botón flotante llevan el color oficial de su aplicación, no el acento del sitio — son identidades ajenas que el visitante reconoce antes de leer la etiqueta. El canal de teléfono no tiene marca propia, así que usa el azul eléctrico del sistema.
 - **Bisel de dispositivo** (`device-bezel` `#1b1e28`): el marco del mockup de móvil es un tono propio, ligeramente más claro que `surface`, para leerse como el borde físico de un teléfono y no como una tarjeta más.
 
@@ -213,6 +213,23 @@ Isotipo de Marco: anillo rectangular redondeado con dos vértices de llave (`{` 
 
 ### Ventana proyecto.js (componente de firma)
 Panel de código con barra de tres puntos (violeta/azul/verde) y título de archivo en mono. El código se teclea carácter a carácter con ritmo irregular, se detiene brevemente antes de imprimir la salida `> listo` y remata con un pulso de color al terminar. Respeta `prefers-reduced-motion` mostrando el contenido ya completo. El resaltado de sintaxis usa los tres acentos de marca para claves/funciones/strings, más `syntax-comment` y `syntax-number` (ver Sub-paletas) para comentarios y literales numéricos, siguiendo la convención de un editor de código real.
+
+### El reto (`.reto`)
+Bajo la descripción de cada proyecto, separado por una línea de 1px, un `<dl>` con la
+etiqueta `// el reto` en mono verde y un párrafo contando un problema técnico real y cómo
+se resolvió. Es la pieza que convierte el portfolio en prueba: como el código es de los
+clientes y no se puede enseñar, esto es lo que demuestra criterio técnico.
+
+### Trío de móviles (`.phones`)
+Para los proyectos que son una app y no una web, en lugar del mockup de navegador van tres
+capturas de pantalla en su propio marco de iPhone, en rejilla de tres. Las de los lados caen
+18px para que la del centro mande. Las imágenes ya traen el marco, así que **no** se envuelven
+en `.phone`.
+
+### Stack (`.stack`)
+Cuatro grupos en dos columnas, cada uno con una etiqueta mono en mayúsculas y una fila de
+cápsulas reutilizando `.tags`. Sin iconos y sin tarjetas: es una lista, no un escaparate de
+logos.
 
 ### Mockups de navegador y móvil
 Ventanas "objeto" que enmarcan las capturas de proyectos reales. El mockup de móvil usa `device-bezel` como color de marco y fondo, un tono propio pensado para leerse como carcasa física, no como superficie de la interfaz.

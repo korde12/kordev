@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>kordev — Desarrollador web en Lebrija | Webs y tiendas online a medida</title>
-<meta name="description" content="Desarrollador web freelance en Lebrija, Sevilla. Diseño y programo webs, tiendas online y landing pages rápidas, cuidadas y pensadas para vender. Pide presupuesto sin compromiso.">
+<meta name="description" content="Marco Cordero, desarrollador web en Lebrija (Sevilla). Tiendas online, una web con reservas y una app móvil, construidas y mantenidas de principio a fin. React, Next.js, Expo y Cloudflare.">
 <meta name="theme-color" content="#05050c">
 <meta name="author" content="Marco Cordero">
 <link rel="canonical" href="https://www.kordev.es/">
@@ -14,8 +14,8 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="kordev">
 <meta property="og:url" content="https://www.kordev.es/">
-<meta property="og:title" content="kordev — Webs que no solo se ven bien: te traen clientes">
-<meta property="og:description" content="Páginas web, tiendas online y landings a medida. Desarrollo web en Lebrija, Sevilla.">
+<meta property="og:title" content="kordev — Marco Cordero, desarrollador web en Lebrija">
+<meta property="og:description" content="Tiendas online, una web con reservas y una app móvil, construidas y mantenidas de principio a fin. React, Next.js, Expo y Cloudflare.">
 <meta property="og:image" content="https://www.kordev.es/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=20261027a">
+<link rel="stylesheet" href="assets/css/styles.css?v=20261121a">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -71,11 +71,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     </a>
 
     <nav class="nav__links" id="navLinks">
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#proceso">Cómo trabajo</a>
+      <a href="#trabajo">Trabajo</a>
+      <a href="#stack">Stack</a>
+      <a href="#sobre-mi">Sobre mí</a>
       <a href="#contacto">Contacto</a>
-      <a href="#" id="navWaLink" target="_blank" rel="noopener" class="btn btn--sm btn--primary nav__cta">Agendar cita</a>
+      <a href="#" id="navWaLink" target="_blank" rel="noopener" class="btn btn--sm btn--primary nav__cta">Escríbeme</a>
     </nav>
 
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -90,26 +90,27 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="hero" id="inicio">
   <div class="container hero__inner">
     <div class="hero__content">
-      <p class="badge"><span class="badge__dot"></span> Disponible para nuevos proyectos</p>
-      <p class="eyebrow">// desarrollador web en lebrija, sevilla</p>
+      <p class="badge"><span class="badge__dot"></span> Abierto a incorporarme a un equipo</p>
+      <p class="eyebrow">// desarrollador web · lebrija, sevilla</p>
 
-      <h1 class="hero__title">
-        Webs que no solo se ven bien:<br>
-        <span class="grad">te traen clientes.</span>
+      <h1 class="hero__title hero__title--largo">
+        Desarrollo y mantengo<br>
+        <span class="grad">software en producción.</span>
       </h1>
 
       <p class="hero__text">
-        Soy Marco, desarrollador web freelance en Lebrija (Sevilla). Diseño y programo
-        <strong>páginas web, tiendas online y landings</strong> a medida: rápidas, cuidadas
-        al detalle y preparadas para que la gente te encuentre y te escriba.
+        Soy Marco Cordero, desarrollador web en Lebrija (Sevilla). Tiendas online que
+        cobran, una web con sistema de reservas y una app móvil:
+        <strong>construidas, desplegadas y mantenidas por mí</strong>. Aprendí con proyectos
+        reales en producción y curso el grado de Desarrollo de Aplicaciones Web.
       </p>
 
       <div class="hero__actions">
-        <a href="#contacto" class="btn btn--primary btn--lg">
-          Agendar una cita
+        <a href="#trabajo" class="btn btn--primary btn--lg">
+          Ver el trabajo
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#proyectos" class="btn btn--glass btn--lg">Ver proyectos</a>
+        <a href="#contacto" class="btn btn--glass btn--lg">Escríbeme</a>
       </div>
     </div>
 
@@ -120,31 +121,269 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <span class="dot dot--red"></span>
           <span class="dot dot--yellow"></span>
           <span class="dot dot--green"></span>
-          <span class="window__title">proyecto.js</span>
+          <span class="window__title">marco.js</span>
         </div>
-        <pre class="window__code"><code><span class="c-com">// Así empieza cada proyecto</span>
-<span class="c-key">const</span> <span class="c-var">proyecto</span> = {
-  cliente:   <span class="c-str">"tu negocio"</span>,
-  objetivo:  <span class="c-str">"más clientes"</span>,
-  diseño:    <span class="c-str">"a medida"</span>,
-  velocidad: <span class="c-num">100</span>,
-  entrega:   <span class="c-str">"en semanas, no meses"</span>
+        <pre class="window__code"><code><span class="c-com">// Lo que hay detrás de esta web</span>
+<span class="c-key">const</span> <span class="c-var">marco</span> = {
+  base:    <span class="c-str">"Lebrija, Sevilla"</span>,
+  front:   <span class="c-str">"React · Next · Expo"</span>,
+  datos:   <span class="c-str">"Cloudflare · Mongo · Supabase"</span>,
+  entrega: <span class="c-str">"de principio a fin"</span>,
+  grado:   <span class="c-str">"DAW"</span>
 };
 
-<span class="c-fn">lanzar</span>(proyecto); <span class="c-com">// 🚀</span>
-<span class="c-out">&gt; listo<span class="caret"></span></span></code></pre>
+<span class="c-fn">contactar</span>(marco); <span class="c-com">// ✉️</span>
+<span class="c-out">&gt; disponible<span class="caret"></span></span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL TRABAJO ============ -->
+<section class="section" id="trabajo">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// proyectos</p>
+      <h2 class="section__title">Construido, desplegado y mantenido</h2>
+      <p class="section__sub">De cada proyecto: qué construí, con qué stack y el problema técnico que hubo que resolver. Salvo la app, que es una demo, todos están en producción con clientes reales.</p>
+    </header>
+
+    <!-- Proyecto 1 -->
+    <article class="project reveal">
+      <div class="project__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="browser__url">wallburguer.com</span>
+          </div>
+          <a class="browser__shot" href="https://www.wallburguer.com" target="_blank" rel="noopener">
+            <img src="assets/img/wallburguer.webp"
+                 srcset="assets/img/wallburguer-800.webp 800w, assets/img/wallburguer.webp 1440w"
+                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de Wall Burger, hamburguesería en Lebrija" loading="lazy" width="1440" height="1000">
+            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+        <div class="phone">
+          <img src="assets/img/wallburguer-mobile.webp" alt="Wall Burger en versión móvil" loading="lazy" width="480" height="1040">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">Hostelería · en producción</p>
+        <h3 class="project__title">Wall Burger</h3>
+        <p class="project__desc">
+          Hamburguesería de Lebrija. Por delante, la carta y el diseño; por detrás, un sistema de reservas de mesa: seis endpoints, aforo por franja horaria, correo de confirmación al cliente y al restaurante, enlace de Google Calendar y confirmar o cancelar desde el propio email con un token.
+        </p>
+        <dl class="reto">
+          <dt>// el reto</dt>
+          <dd>
+            La web nació en una plataforma de pago en la que cada cambio costaba créditos. La saqué de allí y reescribí el backend —era FastAPI con MongoDB— como funciones de Cloudflare sobre una base D1. Mismo servicio, sin arranques en frío y 0 € de alojamiento. De paso, las imágenes pasaron de 47 MB a 4,7 MB en WebP.
+          </dd>
+        </dl>
+        <ul class="tags">
+          <li>React</li><li>Tailwind</li><li>GSAP</li><li>Cloudflare Pages Functions</li><li>D1</li><li>Resend</li>
+        </ul>
+        <a href="https://www.wallburguer.com" target="_blank" rel="noopener" class="btn btn--primary">
+          Visitar wallburguer.com
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Proyecto 2 -->
+    <article class="project project--reverse reveal">
+      <div class="project__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="browser__url">thefactoryphone.es</span>
+          </div>
+          <a class="browser__shot" href="https://www.thefactoryphone.es" target="_blank" rel="noopener">
+            <img src="assets/img/thefactoryphone.webp"
+                 srcset="assets/img/thefactoryphone-800.webp 800w, assets/img/thefactoryphone.webp 1440w"
+                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de The Factory Phone, tienda de móviles y reparaciones" loading="lazy" width="1440" height="1000">
+            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+        <div class="phone">
+          <img src="assets/img/thefactoryphone-mobile.webp" alt="The Factory Phone en versión móvil" loading="lazy" width="480" height="1040">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">E-commerce · en producción</p>
+        <h3 class="project__title">The Factory Phone</h3>
+        <p class="project__desc">
+          Tienda de compra, venta y reparación de móviles. Catálogo con buscador y filtros, carrito, pago con tarjeta, cuentas de cliente, panel de administración y formularios de reparación y tasación que entran directos al correo de la tienda.
+        </p>
+        <dl class="reto">
+          <dt>// el reto</dt>
+          <dd>
+            El catálogo de fundas cubre 27 modelos de iPhone. Dar de alta una ficha por modelo habría dejado el panel inmanejable para el cliente, así que agrupé las máscaras por tipo de módulo de cámara —estándar, Pro y Mini—. Tres plantillas cubren los 27, y sacar un modelo nuevo es elegir grupo.
+          </dd>
+        </dl>
+        <ul class="tags">
+          <li>Next.js</li><li>MongoDB</li><li>Stripe</li><li>PayPal</li><li>Login con Google</li><li>Panel admin</li>
+        </ul>
+        <a href="https://www.thefactoryphone.es" target="_blank" rel="noopener" class="btn btn--primary">
+          Visitar thefactoryphone.es
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Proyecto 3 -->
+    <article class="project reveal">
+      <div class="project__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="browser__url">tapisol.es</span>
+          </div>
+          <a class="browser__shot" href="https://www.tapisol.es" target="_blank" rel="noopener">
+            <img src="assets/img/tapisol.webp"
+                 srcset="assets/img/tapisol-800.webp 800w, assets/img/tapisol.webp 1440w"
+                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de Tapisol, taller de toldos y tapicería en Lebrija" loading="lazy" width="1440" height="1000">
+            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+        <div class="phone">
+          <img src="assets/img/tapisol-mobile.webp" alt="Tapisol en versión móvil" loading="lazy" width="480" height="1040">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">Configurador de precios · en producción</p>
+        <h3 class="project__title">Tapisol</h3>
+        <p class="project__desc">
+          Taller de toldos y tapicería de Lebrija con más de 30 años. Web y tienda con galería de obras reales, carrito y un panel desde el que el propio taller lleva sus productos y sus tarifas.
+        </p>
+        <dl class="reto">
+          <dt>// el reto</dt>
+          <dd>
+            Un toldo no tiene precio de catálogo: depende de los metros y del tejido. Monté un configurador que calcula el precio en tiempo real con las tarifas reales del taller, y dejé esas tarifas dentro del panel para que las actualicen ellos sin pasar por mí.
+          </dd>
+        </dl>
+        <ul class="tags">
+          <li>JavaScript sin framework</li><li>Cálculo de precios</li><li>Carrito</li><li>Panel de gestión</li><li>SEO local</li>
+        </ul>
+        <a href="https://www.tapisol.es" target="_blank" rel="noopener" class="btn btn--primary">
+          Visitar tapisol.es
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Proyecto 4 -->
+    <article class="project project--reverse reveal">
+      <div class="project__media">
+        <div class="phones">
+          <img src="assets/img/healthyway-inicio.webp" alt="Pantalla de inicio de la app, con la carta por secciones" loading="lazy" width="420" height="878">
+          <img src="assets/img/healthyway-ficha.webp" alt="Ficha de un plato con sus opciones" loading="lazy" width="420" height="878">
+          <img src="assets/img/healthyway-tarjeta.webp" alt="Tarjeta de sellos con código QR" loading="lazy" width="420" height="878">
+        </div>
+      </div>
+
+      <div class="project__info">
+        <p class="eyebrow">App móvil · demo</p>
+        <h3 class="project__title">Healthy Way</h3>
+        <p class="project__desc">
+          App de pedidos para un negocio de comida sana, en Android y iPhone. Carta por secciones, ficha de plato con opciones, carrito, checkout y una tarjeta de sellos con QR. Es un prototipo para enseñar, todavía no está publicada en las tiendas.
+        </p>
+        <dl class="reto">
+          <dt>// el reto</dt>
+          <dd>
+            Al ser una demo no hay servidor detrás: el pedido sale por WhatsApp con el mensaje ya montado. Eso deja toda la lógica de precios y opciones en el cliente, así que va cubierta con tests. La versión real, ya empezada, mueve esos datos a Supabase con reglas de acceso por fila.
+          </dd>
+        </dl>
+        <ul class="tags">
+          <li>React Native</li><li>Expo</li><li>TypeScript</li><li>expo-router</li><li>Supabase</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ============ STACK ============ -->
+<section class="section section--alt" id="stack">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// stack</p>
+      <h2 class="section__title">Con lo que trabajo</h2>
+      <p class="section__sub">Lo que he usado para construir, desplegar y mantener los proyectos de arriba.</p>
+    </header>
+
+    <div class="stack">
+      <div class="stack__grupo reveal">
+        <h3>Interfaz</h3>
+        <ul class="tags"><li>React</li><li>Next.js</li><li>React Native</li><li>Expo</li><li>TypeScript</li><li>Tailwind</li><li>HTML y CSS</li><li>GSAP</li></ul>
+      </div>
+      <div class="stack__grupo reveal">
+        <h3>Servidor y datos</h3>
+        <ul class="tags"><li>Node</li><li>Cloudflare Workers</li><li>Pages Functions</li><li>D1</li><li>MongoDB</li><li>Supabase</li><li>SQL</li></ul>
+      </div>
+      <div class="stack__grupo reveal">
+        <h3>Pagos y servicios</h3>
+        <ul class="tags"><li>Stripe</li><li>PayPal</li><li>Resend</li><li>Login con Google</li></ul>
+      </div>
+      <div class="stack__grupo reveal">
+        <h3>Despliegue y medición</h3>
+        <ul class="tags"><li>Git y GitHub</li><li>Cloudflare</li><li>Vercel</li><li>Lighthouse</li><li>Search Console</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="section" id="sobre-mi">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">// sobre mí</p>
+      <h2 class="section__title">Cómo llegué hasta aquí</h2>
+    </header>
+
+    <div class="bio">
+      <div class="reveal">
+        <p>
+          Empecé como <strong>técnico de TPV</strong> en una empresa de sistemas para
+          hostelería: montaba los equipos de bares y restaurantes y configuraba el producto.
+          Conozco por dentro el negocio para el que hoy escribo código, y eso cambia las
+          preguntas que hago antes de empezar nada.
+        </p>
+        <p>
+          De ahí pasé a construir por mi cuenta. El primer encargo fue la web de una
+          hamburguesería; desde entonces cada cosa que he aprendido ha salido de un proyecto
+          en producción, con alguien esperándolo.
+        </p>
+      </div>
+      <div class="reveal">
+        <p>
+          Actualmente curso el <strong>grado superior de Desarrollo de Aplicaciones Web</strong>
+          en Ilerna, para acreditar y ordenar lo que ya venía haciendo.
+        </p>
+        <p>
+          Trabajo de principio a fin: diseño, desarrollo, despliegue y el mantenimiento de
+          después. Estoy acostumbrado a que lo que entrego lo use gente que no sabe de código
+          y a medir antes de opinar.
+        </p>
+        <p>
+          <strong>Busco incorporarme a un equipo</strong> donde seguir aprendiendo de gente con
+          más experiencia.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ SERVICIOS ============ -->
-<section class="section" id="servicios">
+<section class="section section--alt" id="servicios">
   <div class="container">
     <header class="section__head">
       <p class="eyebrow">// servicios</p>
-      <h2 class="section__title">¿Qué puedo hacer por tu negocio?</h2>
-      <p class="section__sub">Desde crear una página web sencilla hasta una tienda online completa, para negocios de Lebrija y de toda la provincia de Sevilla. Todo hecho a medida, sin plantillas genéricas.</p>
+      <h2 class="section__title">Trabajo como freelance</h2>
+      <p class="section__sub">Si has llegado buscando quien te haga la web, esto es lo que hago para negocios de Lebrija y la provincia de Sevilla.</p>
     </header>
 
     <ol class="ledger">
@@ -205,155 +444,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 </section>
 
-<!-- ============ PROYECTOS ============ -->
-<section class="section section--alt" id="proyectos">
-  <div class="container">
-    <header class="section__head">
-      <p class="eyebrow">// proyectos</p>
-      <h2 class="section__title">Trabajos reales, online ahora mismo</h2>
-      <p class="section__sub">Puedes entrar y probarlos tú mismo. Nada de maquetas: son webs funcionando con clientes reales.</p>
-    </header>
-
-    <!-- Proyecto 1 -->
-    <article class="project reveal">
-      <div class="project__media">
-        <div class="browser">
-          <div class="browser__bar">
-            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
-            <span class="browser__url">wallburguer.com</span>
-          </div>
-          <a class="browser__shot" href="https://www.wallburguer.com" target="_blank" rel="noopener">
-            <img src="assets/img/wallburguer.webp"
-                 srcset="assets/img/wallburguer-800.webp 800w, assets/img/wallburguer.webp 1440w"
-                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de Wall Burger, hamburguesería en Lebrija" loading="lazy" width="1440" height="1000">
-            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </a>
-        </div>
-        <div class="phone">
-          <img src="assets/img/wallburguer-mobile.webp" alt="Wall Burger en versión móvil" loading="lazy" width="480" height="1040">
-        </div>
-      </div>
-
-      <div class="project__info">
-        <p class="eyebrow">01 — Restauración</p>
-        <h3 class="project__title">Wall Burger</h3>
-        <p class="project__desc">
-          Web completa para una hamburguesería premium de Lebrija. Diseño oscuro con carácter,
-          animaciones al hacer scroll, carta interactiva con precios y reserva de mesa online.
-          El objetivo era claro: que al entrar te entren ganas de reservar.
-        </p>
-        <ul class="project__points">
-          <li>Carta digital con categorías y fotos</li>
-          <li>Reserva de mesa desde el móvil</li>
-          <li>Animaciones y diseño 100% personalizado</li>
-          <li>Optimizada para búsquedas locales</li>
-        </ul>
-        <ul class="tags">
-          <li>Next.js</li><li>React</li><li>Animaciones</li><li>Diseño a medida</li><li>SEO local</li>
-        </ul>
-        <a href="https://www.wallburguer.com" target="_blank" rel="noopener" class="btn btn--primary">
-          Visitar wallburguer.com
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
-      </div>
-    </article>
-
-    <!-- Proyecto 2 -->
-    <article class="project project--reverse reveal">
-      <div class="project__media">
-        <div class="browser">
-          <div class="browser__bar">
-            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
-            <span class="browser__url">thefactoryphone.es</span>
-          </div>
-          <a class="browser__shot" href="https://www.thefactoryphone.es" target="_blank" rel="noopener">
-            <img src="assets/img/thefactoryphone.webp"
-                 srcset="assets/img/thefactoryphone-800.webp 800w, assets/img/thefactoryphone.webp 1440w"
-                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de The Factory Phone, tienda de móviles y reparaciones" loading="lazy" width="1440" height="1000">
-            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </a>
-        </div>
-        <div class="phone">
-          <img src="assets/img/thefactoryphone-mobile.webp" alt="The Factory Phone en versión móvil" loading="lazy" width="480" height="1040">
-        </div>
-      </div>
-
-      <div class="project__info">
-        <p class="eyebrow">02 — E-commerce</p>
-        <h3 class="project__title">The Factory Phone</h3>
-        <p class="project__desc">
-          Tienda online completa para un negocio de compra, venta y reparación de móviles.
-          Catálogo con buscador, carrito, pago con tarjeta, cuentas de cliente y formularios
-          de reparación y tasación conectados al correo de la tienda.
-        </p>
-        <ul class="project__points">
-          <li>Catálogo con buscador y filtros</li>
-          <li>Carrito y pago seguro con tarjeta</li>
-          <li>Acceso de clientes y panel de pedidos</li>
-          <li>Solicitud de reparación y venta de móvil</li>
-        </ul>
-        <ul class="tags">
-          <li>React</li><li>Stripe</li><li>Login con Google</li><li>Emails automáticos</li><li>Cloudflare</li>
-        </ul>
-        <a href="https://www.thefactoryphone.es" target="_blank" rel="noopener" class="btn btn--primary">
-          Visitar thefactoryphone.es
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
-      </div>
-    </article>
-
-    <!-- Proyecto 3 -->
-    <article class="project reveal">
-      <div class="project__media">
-        <div class="browser">
-          <div class="browser__bar">
-            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
-            <span class="browser__url">tapisol.es</span>
-          </div>
-          <a class="browser__shot" href="https://www.tapisol.es" target="_blank" rel="noopener">
-            <img src="assets/img/tapisol.webp"
-                 srcset="assets/img/tapisol-800.webp 800w, assets/img/tapisol.webp 1440w"
-                 sizes="(max-width: 980px) 92vw, 620px" alt="Página de inicio de Tapisol, taller de toldos y tapicería en Lebrija" loading="lazy" width="1440" height="1000">
-            <span class="browser__hover">Abrir web <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </a>
-        </div>
-        <div class="phone">
-          <img src="assets/img/tapisol-mobile.webp" alt="Tapisol en versión móvil" loading="lazy" width="480" height="1040">
-        </div>
-      </div>
-
-      <div class="project__info">
-        <p class="eyebrow">03 — Taller y tienda online</p>
-        <h3 class="project__title">Tapisol</h3>
-        <p class="project__desc">
-          Web y tienda online para un taller de toldos y tapicería de Lebrija con más de 30 años.
-          Pones tus medidas y el precio se calcula solo, galería de obras reales y un panel
-          para que el propio taller gestione sus productos y precios.
-        </p>
-        <ul class="project__points">
-          <li>Configurador de toldos con precio según medidas</li>
-          <li>Tienda con carrito de toldos, lonas y accesorios</li>
-          <li>Galería de trabajos con fotos de cada obra</li>
-          <li>Panel de gestión para el cliente</li>
-        </ul>
-        <ul class="tags">
-          <li>HTML, CSS y JS</li><li>Calculadora de precios</li><li>Carrito</li><li>Panel de gestión</li><li>SEO local</li>
-        </ul>
-        <a href="https://www.tapisol.es" target="_blank" rel="noopener" class="btn btn--primary">
-          Visitar tapisol.es
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
-      </div>
-    </article>
-  </div>
-</section>
-
 <!-- ============ PROCESO ============ -->
 <section class="section" id="proceso">
   <div class="container">
     <header class="section__head">
       <p class="eyebrow">// cómo trabajo</p>
-      <h2 class="section__title">Del primer café a la web publicada</h2>
+      <h2 class="section__title">Cómo trabajo</h2>
       <p class="section__sub">Un proceso sencillo y sin sorpresas. Tú me cuentas, yo me encargo del resto.</p>
     </header>
 
@@ -395,8 +491,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="container">
     <header class="section__head">
       <p class="eyebrow">// contacto</p>
-      <h2 class="section__title">Cuéntame tu proyecto</h2>
-      <p class="section__sub">Escríbeme, llámame o mándame un email y te respondo normalmente en menos de 24 horas con una idea y un presupuesto orientativo.</p>
+      <h2 class="section__title">Hablamos</h2>
+      <p class="section__sub">Escríbeme por donde te venga mejor. Respondo normalmente en menos de 24 horas.</p>
     </header>
 
     <div class="canales">
@@ -476,6 +572,34 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 }
 </script>
 
-<script src="assets/js/main.js?v=20261027a"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marco Cordero",
+  "alternateName": "kordev",
+  "jobTitle": "Desarrollador web",
+  "email": "corderojuradomarco@gmail.com",
+  "telephone": "+34672096769",
+  "url": "https://www.kordev.es/",
+  "image": "https://www.kordev.es/assets/img/og.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lebrija",
+    "addressRegion": "Sevilla",
+    "addressCountry": "ES"
+  },
+  "knowsAbout": [
+    "React", "Next.js", "React Native", "Expo", "TypeScript",
+    "Cloudflare Workers", "MongoDB", "Supabase", "Stripe", "SEO local"
+  ],
+  "seeks": {
+    "@type": "Demand",
+    "name": "Incorporarse a un equipo de desarrollo"
+  }
+}
+</script>
+
+<script src="assets/js/main.js?v=20261121a"></script>
 </body>
 </html>
